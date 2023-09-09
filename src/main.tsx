@@ -2,11 +2,11 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import Layout from "./routes/layout.jsx";
-import ErrorPage from "./routes/error.jsx";
+import Layout from "./routes/layout.tsx";
+import ErrorPage from "./routes/error.tsx";
 
-import About from "./routes/about.jsx";
-import Index from "./routes/index.jsx";
+import About from "./routes/about.tsx";
+import Index from "./routes/index.tsx";
 
 import "./index.css";
 
