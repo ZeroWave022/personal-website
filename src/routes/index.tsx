@@ -1,4 +1,37 @@
 export default function Index() {
+    const experienceList = [
+        {
+            name: "Python",
+            level: "100%",
+            duration: "6 years",
+        },
+        {
+            name: "Javascript",
+            level: "100%",
+            duration: "3 years",
+        },
+        {
+            name: "Typescript",
+            level: "70%",
+            duration: "2 years",
+        },
+        {
+            name: "HTML",
+            level: "100%",
+            duration: "3 years",
+        },
+        {
+            name: "CSS",
+            level: "80%",
+            duration: "3 years",
+        },
+        {
+            name: "React",
+            level: "70%",
+            duration: "2 years",
+        },
+    ];
+
     return (
         <>
             <div className="mx-auto flex w-fit flex-col gap-12 dark:text-slate-200 lg:flex-row">
@@ -34,7 +67,7 @@ export default function Index() {
                         new every day.
                     </p>
                     <h2>What do I use?</h2>
-                    <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-neutral-800 p-3 shadow-xl dark:border-emerald-400/90 dark:shadow-none">
+                    <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
                         <img
                             className=""
                             src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
@@ -43,6 +76,53 @@ export default function Index() {
                     </div>
                 </div>
             </div>
+
+            <h1>Skills</h1>
+            <div className="mx-auto my-2 flex w-fit flex-col p-2.5">
+                <div className="grid grid-cols-3 items-center justify-items-center gap-5">
+                    {experienceList.map((item) => (
+                        <div
+                            key={item.name}
+                            className="rounded-xl bg-slate-500/40 shadow-sm duration-300 ease-in-out hover:shadow-md dark:bg-neutral-500"
+                        >
+                            <div className="h-full w-full p-2 text-center text-lg font-semibold dark:text-slate-200">
+                                {item.name}
+                            </div>
+                            <div className="h-full w-full p-2 dark:text-slate-200">
+                                <ProgressBar percent={item.level} />
+                            </div>
+                            <div className="h-full w-full p-2 text-center dark:text-slate-200">
+                                {item.duration} of experience
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <p className="text-center italic underline-offset-2">
+                Note: The numbers are{" "}
+                <span
+                    className="underline decoration-dotted"
+                    title="A value of 100% does not imply a total mastery with nothing new to learn"
+                >
+                    relative
+                </span>{" "}
+                to each other.
+            </p>
         </>
+    );
+}
+
+function ProgressBar({ percent }: { percent: string }) {
+    return (
+        <div className="relative h-4 w-52 rounded-2xl bg-gray-400">
+            <div
+                style={{ width: percent }}
+                className="absolute left-0 flex h-full items-center justify-center rounded-md bg-blue-600"
+            >
+                <div className="text-sm font-bold leading-none text-slate-200">
+                    {percent}
+                </div>
+            </div>
+        </div>
     );
 }
