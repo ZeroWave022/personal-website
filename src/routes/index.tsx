@@ -1,3 +1,5 @@
+import { ProgressBar } from "@components/ProgressBar"
+
 export default function Index() {
     const experienceList = [
         {
@@ -102,27 +104,12 @@ export default function Index() {
                 Note: The numbers are{" "}
                 <span
                     className="underline decoration-dotted"
-                    title="A value of 100% does not imply a total mastery with nothing new to learn"
+                    title="A value of 100% does not imply a total mastery with nothing new to discover"
                 >
                     relative
                 </span>{" "}
                 to each other.
             </p>
         </>
-    );
-}
-
-function ProgressBar({ percent }: { percent: string }) {
-    return (
-        <div className="relative h-4 w-52 rounded-2xl bg-gray-400">
-            <div
-                style={{ width: percent }}
-                className="absolute left-0 flex h-full items-center justify-center rounded-md bg-blue-600"
-            >
-                <div className="text-sm font-bold leading-none text-slate-200">
-                    {percent}
-                </div>
-            </div>
-        </div>
     );
 }
