@@ -40,7 +40,7 @@ export default function Index() {
 
     return (
         <>
-            <div className="mx-auto flex w-fit flex-col gap-12 dark:text-slate-200 lg:flex-row">
+            <section className="flex justify-center flex-col gap-12 dark:text-slate-200 lg:flex-row">
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
                         Hey! I&apos;m Martin
@@ -81,7 +81,7 @@ export default function Index() {
                         />
                     </div>
                 </div>
-            </div>
+            </section>
 
             <h1>Skills</h1>
             <div className="mx-auto my-2 flex w-fit flex-col p-2.5">

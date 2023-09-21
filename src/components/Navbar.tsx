@@ -17,9 +17,9 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="flex items-center justify-between p-6 lg:px-8">
+            <nav className="flex fixed top-0 w-full z-50 bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between p-1 lg:px-8">
                 {/* Navbar logo */}
-                <div className="flex lg:flex-1">
+                <div className="flex">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Logo</span>
                         <img
@@ -41,7 +41,7 @@ export function Navbar() {
                     </button>
                 </div>
                 {/* Main links */}
-                <div className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:gap-x-12">
+                <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
                         <Link
                             key={item.name}

@@ -11,7 +11,7 @@ export default function Layout() {
                     <Navbar />
                 </header>
 
-                <div className="mx-6 flex-1">
+                <div className="mx-6 mt-20 flex-1">
                     <Outlet />
                 </div>
 
