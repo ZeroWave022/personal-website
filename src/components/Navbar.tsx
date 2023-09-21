@@ -17,7 +17,7 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="flex fixed top-0 w-full z-50 bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between p-1 lg:px-8">
+            <nav className="flex bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between p-1 lg:px-8">
                 {/* Navbar logo */}
                 <div className="flex">
                     <a href="#" className="-m-1.5 p-1.5">
