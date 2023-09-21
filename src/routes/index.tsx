@@ -5,32 +5,32 @@ export default function Index() {
         {
             name: "Python",
             level: "100%",
-            duration: "6 years",
+            duration: `${new Date().getFullYear() - 2017} years`,
         },
         {
             name: "Javascript",
             level: "100%",
-            duration: "3 years",
+            duration: `${new Date().getFullYear() - 2020} years`,
         },
         {
             name: "Typescript",
             level: "70%",
-            duration: "2 years",
+            duration: `${new Date().getFullYear() - 2021} years`,
         },
         {
             name: "HTML",
             level: "100%",
-            duration: "3 years",
+            duration: `${new Date().getFullYear() - 2020} years`,
         },
         {
             name: "CSS",
             level: "80%",
-            duration: "3 years",
+            duration: `${new Date().getFullYear() - 2020} years`,
         },
         {
             name: "React",
             level: "70%",
-            duration: "2 years",
+            duration: `${new Date().getFullYear() - 2021} years`,
         },
     ];
 
