@@ -1,4 +1,8 @@
-import { ProgressBar } from "@components/ProgressBar"
+import { ProgressBar } from "@components/ProgressBar";
+import { LargeLink } from "@components/LargeLink";
+
+import discover_poland from "@assets/discover_poland.png";
+import musicvision from "@assets/musicvision.png";
 
 export default function Index() {
     const experienceList = [
@@ -110,6 +114,46 @@ export default function Index() {
                 </span>{" "}
                 to each other.
             </p>
+
+            <h1>Project 1: <span className="dark:text-white">Discover</span> <span className="text-green-600 dark:text-emerald-500">Poland</span></h1>
+            <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
+                <div className="flex flex-col gap-8 justify-center items-center">
+                    <p>
+                        Have you ever considered visiting Poland? Visit Discover Poland now to find out why it&apos;s a good idea!
+                        Discover Poland is a website about tourist attractions in Poland, encouraging to discover the ❤️ of Europe.
+                    </p>
+                    <p>
+                        Technologies used: Next.js and React
+                    </p>
+
+                    <LargeLink color="green-light" link="https://discoverpoland.netlify.app">
+                        Visit Discover Poland
+                    </LargeLink>
+                </div>
+                <a className="max-w-[45vw] overflow-hidden inline-block rounded-md py-5 bg-white cursor-pointer" href="https://discoverpoland.netlify.app" target="_blank" rel="noreferrer">
+                    <img className="w-full hover:scale-[102%] transition duration-700 ease-in-out" src={discover_poland} alt="Discover Poland" />
+                </a>
+            </div>
+
+            <h1>Project 2: MusicVision</h1>
+            <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
+                <div className="flex flex-col gap-8 justify-center items-center">
+                    <p>
+                        MusicVision is an experimental project to create a Spotify dashboard, including your top artists, tracks, historical listening data and playback control.
+                        Currently MusicVision isn&apos;t available as a website, but the code is available on GitHub.
+                    </p>
+                    <p className="m-0">
+                        Technologies used: Flask (Python), PostgreSQL, chart.js
+                    </p>
+
+                    <LargeLink color="green-light" link="https://github.com/ZeroWave022/MusicVision">
+                        Browse code
+                    </LargeLink>
+                </div>
+                <a className="max-w-[45vw] overflow-hidden inline-block rounded-md p-5 bg-[#e4dccf] cursor-pointer" href="https://github.com/ZeroWave022/MusicVision" target="_blank" rel="noreferrer">
+                    <img className="w-full hover:scale-[102%] transition duration-700 ease-in-out" src={musicvision} alt="Discover Poland" />
+                </a>
+            </div>
         </>
     );
 }
