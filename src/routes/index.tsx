@@ -40,7 +40,7 @@ export default function Index() {
 
     return (
         <>
-            <section className="h-screen flex justify-center flex-col gap-12 dark:text-slate-200 lg:flex-row snap-start snap-always">
+            <section id="top" className="h-screen flex justify-center flex-col gap-12 dark:text-slate-200 lg:flex-row snap-start snap-always">
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
                         Hey! I&apos;m Martin
@@ -83,7 +83,7 @@ export default function Index() {
                 </div>
             </section>
 
-            <section className="h-screen snap-start snap-always">
+            <section id="skills" className="h-screen snap-start snap-always">
                 <h1>Skills</h1>
                 <div className="mx-auto my-2 flex w-fit flex-col p-2.5">
                     <div className="grid grid-cols-3 items-center justify-items-center gap-5">
@@ -117,7 +117,7 @@ export default function Index() {
                 </p>
             </section>
             
-            <section className="h-screen snap-start snap-always">
+            <section id="projects" className="h-screen snap-start snap-always">
                 <h1>Project 1: <span className="dark:text-white">Discover</span> <span className="text-green-600 dark:text-emerald-500">Poland</span></h1>
                 <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
                     <div className="flex flex-col gap-8 justify-center items-center">

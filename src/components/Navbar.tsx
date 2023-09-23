@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
-import logo from "@assets/logo.png"
+import logo from "@assets/logo.png";
 
 export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const navigation = [
-        { name: "Home", href: "/" },
-        { name: "Projects", href: "#" },
-        { name: "Prior Experience", href: "#" },
-        { name: "About", href: "/about" },
+        { name: "Home", href: "/", scrollTo: "top" },
+        { name: "Skills", href: "/", scrollTo: "skills" },
+        { name: "Projects", href: "/", scrollTo: "projects" },
+        { name: "About", href: "/about", scrollTo: "top" },
     ];
 
     return (
@@ -20,14 +21,14 @@ export function Navbar() {
             <nav className="flex bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between p-1 lg:px-8">
                 {/* Navbar logo */}
                 <div className="flex">
-                    <a href="#" className="-m-1.5 p-1.5">
+                    <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
                         <span className="sr-only">Logo</span>
                         <img
                             className="h-12 w-auto invert dark:invert-0"
                             src={logo}
                             alt="Logo"
                         />
-                    </a>
+                    </HashLink>
                 </div>
                 {/* Mobile menu icon */}
                 <div className="flex lg:hidden">
@@ -43,13 +44,14 @@ export function Navbar() {
                 {/* Main links */}
                 <div className="hidden lg:flex lg:gap-x-12">
                     {navigation.map((item) => (
-                        <Link
+                        <HashLink
                             key={item.name}
                             to={item.href}
+                            elementId={item.scrollTo}
                             className="text-sm font-semibold text-gray-900 dark:text-slate-100"
                         >
                             {item.name}
-                        </Link>
+                        </HashLink>
                     ))}
                 </div>
                 <DarkModeToggle />
