@@ -6,7 +6,7 @@ import { Footer } from "@components/Footer";
 export default function Layout() {
     return (
         <>
-            <div className="h-screen bg-slate-100 dark:bg-neutral-900 overflow-auto snap-y snap-mandatory scroll-pt-20 scroll-smooth">
+            <main className="h-screen bg-slate-100 dark:bg-neutral-900 overflow-auto snap-y snap-mandatory scroll-pt-20 scroll-smooth">
                 <header className="sticky top-0 z-50">
                     <Navbar />
                 </header>
@@ -18,7 +18,7 @@ export default function Layout() {
                 <footer className="snap-end">
                     <Footer />
                 </footer>
-            </div>
+            </main>
         </>
     );
 }
