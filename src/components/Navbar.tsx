@@ -17,7 +17,7 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="flex bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between p-1 lg:px-8">
+            <nav className="flex bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between px-6 py-1 lg:px-8">
                 {/* Navbar logo */}
                 <div className="flex">
                     <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
@@ -61,7 +61,7 @@ export function Navbar() {
                     onClose={setMobileMenuOpen}
                 >
                     <div className="fixed inset-0 z-50" />
-                    <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l-4 border-emerald-500 bg-slate-100 p-6 dark:bg-neutral-900 sm:max-w-sm">
+                    <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l-4 border-emerald-500 bg-slate-100 px-6 py-1 dark:bg-neutral-900 sm:max-w-sm">
                         <div className="flex justify-between">
                             <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Logo</span>

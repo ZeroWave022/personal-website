@@ -40,7 +40,7 @@ export default function Index() {
 
     return (
         <>
-            <section id="top" className="h-screen flex justify-center flex-col gap-12 dark:text-slate-200 lg:flex-row snap-start snap-always">
+            <section id="top" className="mdh:h-screen flex lg:justify-center flex-col gap-12 dark:text-slate-200 lg:flex-row snap-start snap-always">
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
                         Hey! I&apos;m Martin
@@ -83,28 +83,28 @@ export default function Index() {
                 </div>
             </section>
 
-            <section id="skills" className="h-screen snap-start snap-always">
+            <section id="skills" className="mdh:h-screen snap-start snap-always">
                 <h1>Skills</h1>
-                <div className="mx-auto my-2 flex w-fit flex-col p-2.5">
-                    <div className="grid grid-cols-3 items-center justify-items-center gap-5">
-                        {experienceList.map((item) => (
-                            <div
-                                key={item.name}
-                                className="rounded-xl bg-slate-500/40 shadow-sm duration-300 ease-in-out hover:shadow-md dark:bg-neutral-500"
-                            >
-                                <div className="h-full w-full p-2 text-center text-lg font-semibold dark:text-slate-200">
-                                    {item.name}
-                                </div>
-                                <div className="h-full w-full p-2 dark:text-slate-200">
-                                    <ProgressBar percent={item.level} />
-                                </div>
-                                <div className="h-full w-full p-2 text-center dark:text-slate-200">
-                                    {item.duration} of experience
-                                </div>
+                
+                <div className="grid grid-cols-2 w-[70vw] md:w-fit mx-auto my-2  lg:grid-cols-3 items-center justify-items-center gap-5">
+                    {experienceList.map((item) => (
+                        <div
+                            key={item.name}
+                            className="rounded-xl w-full md:w-56 lg:w-64 bg-slate-500/40 shadow-sm duration-300 ease-in-out transition-shadow hover:shadow-md dark:bg-neutral-500"
+                        >
+                            <div className="p-2 text-center text-lg font-semibold dark:text-slate-200">
+                                {item.name}
                             </div>
-                        ))}
-                    </div>
+                            <div className="p-2 dark:text-slate-200">
+                                <ProgressBar percent={item.level} />
+                            </div>
+                            <div className="p-2 text-center dark:text-slate-200">
+                                {item.duration} of experience
+                            </div>
+                        </div>
+                    ))}
                 </div>
+                
                 <p className="text-center italic underline-offset-2">
                     Note: The numbers are{" "}
                     <span
@@ -117,7 +117,7 @@ export default function Index() {
                 </p>
             </section>
             
-            <section id="projects" className="h-screen snap-start snap-always">
+            <section id="projects" className="mdh:h-screen snap-start snap-always">
                 <h1>Project 1: <span className="dark:text-white">Discover</span> <span className="text-green-600 dark:text-emerald-500">Poland</span></h1>
                 <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
                     <div className="flex flex-col gap-8 justify-center items-center">
@@ -133,13 +133,13 @@ export default function Index() {
                             Visit Discover Poland
                         </LargeLink>
                     </div>
-                    <a className="max-w-[45vw] overflow-hidden inline-block rounded-md py-5 bg-white cursor-pointer" href="https://discoverpoland.netlify.app" target="_blank" rel="noreferrer">
+                    <a className="w-[90vw] md:max-w-[45vw] overflow-hidden inline-block rounded-md py-5 bg-white cursor-pointer" href="https://discoverpoland.netlify.app" target="_blank" rel="noreferrer">
                         <img className="w-full hover:scale-[102%] transition duration-700 ease-in-out" src={discover_poland} alt="Discover Poland" />
                     </a>
                 </div>
             </section>
             
-            <section className="h-screen snap-start snap-always">
+            <section className="mdh:h-screen snap-start snap-always">
                 <h1>Project 2: MusicVision</h1>
                 <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
                     <div className="flex flex-col gap-8 justify-center items-center">
@@ -155,7 +155,7 @@ export default function Index() {
                             Browse code
                         </LargeLink>
                     </div>
-                    <a className="max-w-[45vw] overflow-hidden inline-block rounded-md p-5 bg-[#e4dccf] cursor-pointer" href="https://github.com/ZeroWave022/MusicVision" target="_blank" rel="noreferrer">
+                    <a className="w-[90vw] md:max-w-[45vw] overflow-hidden inline-block rounded-md p-5 bg-[#e4dccf] cursor-pointer" href="https://github.com/ZeroWave022/MusicVision" target="_blank" rel="noreferrer">
                         <img className="w-full hover:scale-[102%] transition duration-700 ease-in-out" src={musicvision} alt="Discover Poland" />
                     </a>
                 </div>

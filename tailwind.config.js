@@ -30,6 +30,11 @@ export default {
                     },
                 },
             },
+            screens: {
+                "mdh": {
+                    "raw": "(min-height: 700px)"
+                }
+            }
         },
     },
     plugins: [],
