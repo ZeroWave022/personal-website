@@ -72,21 +72,22 @@ export default function Index() {
                         That&apos;s why I still code today, and learn something
                         new every day.
                     </p>
-                    <h2>What do I use?</h2>
-                    <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
-                        <img
-                            className=""
-                            src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
-                            alt="Icons of programming languages, technologies and more"
-                        />
+                    <div className="mt-2.5">
+                        <h2>What do I use?</h2>
+                        <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
+                            <img
+                                className=""
+                                src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
+                                alt="Icons of programming languages, technologies and more"
+                            />
+                        </div>
                     </div>
                 </div>
             </section>
 
             <section id="skills" className="mdh:h-screen snap-start snap-always">
                 <h1>Skills</h1>
-                
-                <div className="grid grid-cols-2 w-[70vw] md:w-fit mx-auto my-2  lg:grid-cols-3 items-center justify-items-center gap-5">
+                <div className="grid grid-cols-2 w-[80vw] md:w-fit mx-auto my-5  lg:grid-cols-3 items-center justify-items-center gap-5">
                     {experienceList.map((item) => (
                         <div
                             key={item.name}
