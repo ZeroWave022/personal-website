@@ -161,6 +161,33 @@ export default function Index() {
                     </a>
                 </div>
             </section>
+
+            <section className="mdh:h-screen snap-start snap-always">
+                <h1>Project 3: yr-weather</h1>
+                <div className="flex flex-col justify-center items-center gap-5 m-5 md:flex-row">
+                    <div className="flex flex-col gap-8 justify-center items-center">
+                        <p>
+                            <code>yr-weather</code> is a Python library to get weather data from the Norwegian Meteorological Institute&apos;s APIs.
+                            They are completely free to use and this library aims to make it as simple as possible to use them.
+                        </p>
+                        <p className="m-0">
+                            Technologies used: Python
+                        </p>
+
+                        <LargeLink color="green-light" link="https://github.com/ZeroWave022/yr-weather">
+                            Browse code
+                        </LargeLink>
+                    </div>
+                    <div className="flex flex-col items-center gap-2.5">
+                        <a className="w-[90vw] md:max-w-[45vw] overflow-hidden inline-block rounded-md cursor-pointer" href="https://github.com/ZeroWave022/yr-weather" target="_blank" rel="noreferrer">
+                            <img className="w-full hover:scale-[102%] transition duration-700 ease-in-out" src="https://socialify.git.ci/ZeroWave022/yr-weather/image?description=1&descriptionEditable=Fetch%20weather%20data%20the%20from%20Norwegian%20Meteorological%20Institute%27s%20APIs%20easily.&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark" alt="yr-weather" />
+                        </a>
+                        <p>
+                            The image is provided by <a href="https://github.com/wei/socialify" className="font-medium text-green-600 dark:text-emerald-400" target="_blank" rel="noreferrer">socialify</a>.
+                        </p>
+                    </div>
+                </div>
+            </section>
         </>
     );
 }
