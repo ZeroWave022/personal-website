@@ -11,7 +11,7 @@ interface LinkProps {
 export function LargeLink({ color, link, children }: LinkProps) {
     
     return (
-        <a className={`${colors[color]} p-2 rounded-sm w-fit lg:p-3 lg:text-lg`} href={link} target="_blank" rel="noreferrer">
+        <a className={`${colors[color]} text-black p-2 rounded-sm w-fit lg:p-3 lg:text-lg`} href={link} target="_blank" rel="noreferrer">
             {children}
         </a>
     )
