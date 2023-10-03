@@ -20,6 +20,7 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
+            "@root/*": ["./*"],
             "@components/*": ["./src/components/*"],
             "@assets/*": ["./src/assets/*"]
         }

@@ -3,17 +3,12 @@ import { HashLink } from "react-router-hash-link";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
+import config from "@root/config.json";
+
 import logo from "@assets/logo.png";
 
 export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-    const navigation = [
-        { name: "Home", href: "/", scrollTo: "top" },
-        { name: "Skills", href: "/", scrollTo: "skills" },
-        { name: "Projects", href: "/", scrollTo: "projects" },
-        { name: "About", href: "/about", scrollTo: "top" },
-    ];
 
     return (
         <>
@@ -42,7 +37,7 @@ export function Navbar() {
                 </div>
                 {/* Main links */}
                 <div className="hidden lg:flex lg:gap-x-12">
-                    {navigation.map((item) => (
+                    {config.navigation.map((item) => (
                         <HashLink
                             key={item.name}
                             to={item.href}
@@ -86,7 +81,7 @@ export function Navbar() {
                         <div className="mt-6 flow-root">
                             <div className="-my-6">
                                 <div className="space-y-2 py-6">
-                                    {navigation.map((item) => (
+                                    {config.navigation.map((item) => (
                                         <HashLink
                                             key={item.name}
                                             to={item.href}
