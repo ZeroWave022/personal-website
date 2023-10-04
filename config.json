@@ -20,5 +20,16 @@
             "href": "/about",
             "scrollTo": "top"
         }
-    ]
+    ],
+    "languages": {
+        "en": {
+            "nativeName": "English"
+        },
+        "no": {
+            "nativeName": "Norsk (Bokmål)"
+        },
+        "pl": {
+            "nativeName": "Polski"
+        }
+    }
 }
