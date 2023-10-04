@@ -14,14 +14,14 @@
             "note": "Uwaga: Liczby są <2>w stosunku</2> do siebie."
         },
         "projects": {
-            "title1": "Projekt 1: <1>Discover</1> <3>Poland</3>",
+            "title1": "Projekt 1: Discover <2>Poland</2>",
             "description1": "Wiele osób nie odwiedziło jeszcze Polski. Discover Poland jest stroną internetową o atrakcjach turystycznych w Polsce, która zachęca do odkrycia ❤️ Europy.",
             "title2": "Projekt 2: MusicVision",
             "description2": "MusicVision jest eksperymentalnym projektem mającym na celu stworzenie panelu Spotify zawierającego Twoich najpopularniejszych artystów, utwory, historyczne dane na temat Twojej muzyki i kontrolę odtwarzania. Obecnie MusicVision nie jest dostępny jako strona internetowa, ale kod jest upubliczniony i można go obejrzeć na GitHub.",
             "title3": "Projekt 3: yr-weather",
             "description3": "<0>yr-weather</0> to biblioteka do Pythona umożliwiająca pobierania danych pogodowych z interfejsów API Norweskiego Institutu Meteorologicznego. Korzystanie z nich jest całkowicie darmowe, a celem biblioteki jest tego uproszczenie.",
             "techUsed": "Wykorzystane technologie: {{tech, list}}",
-            "socialifyNote": "Obraz jest dostarczony przez <1>socialify</1>."
+            "socialifyNote": "Obraz jest dostarczony przez <2>socialify</2>."
         }
     },
     "common": {

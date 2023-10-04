@@ -8,7 +8,7 @@ export function Footer() {
 
     return (
         <>
-            <footer className="h-[50vh] bg-gray-200 dark:bg-neutral-800 shadow-footer p-4 flex justify-around snap-end">
+            <footer className="flex h-[50vh] snap-end justify-around bg-gray-200 p-4 shadow-footer dark:bg-neutral-800">
                 <div>
                     <h1>{t("footer.title")}</h1>
                     <ul className="flex flex-col items-center gap-2.5 py-2">
