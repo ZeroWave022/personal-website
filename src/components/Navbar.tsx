@@ -1,18 +1,22 @@
 import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
+import { useTranslation } from "react-i18next";
+import classNames from "classnames";
 import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon, SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
 import config from "@root/config.json";
+import { LanguageSwitcher } from "@components/LanguageSwitcher.tsx";
 
 import logo from "@assets/logo.png";
 
 export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const { t, i18n } = useTranslation();
 
     return (
         <>
-            <nav className="flex bg-slate-100 shadow-md dark:bg-neutral-800 items-center justify-between px-6 py-1 lg:px-8">
+            <nav className="flex bg-slate-100 shadow-md text-md font-semibold text-gray-900 dark:text-slate-100 dark:bg-neutral-800 items-center justify-between px-6 py-1 lg:px-8">
                 {/* Navbar logo */}
                 <div className="flex">
                     <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
@@ -36,22 +40,25 @@ export function Navbar() {
                     </button>
                 </div>
                 {/* Main links */}
-                <div className="hidden lg:flex lg:gap-x-12">
+                <div className="hidden lg:flex lg:gap-x-6">
                     {config.navigation.map((item) => (
                         <HashLink
-                            key={item.name}
+                            key={item.id}
                             to={item.href}
                             elementId={item.scrollTo}
-                            className="text-sm font-semibold text-gray-900 dark:text-slate-100"
+                            className="p-2.5"
                         >
-                            {item.name}
+                            {t(`nav.${item.id}`)}
                         </HashLink>
                     ))}
                 </div>
-                <DarkModeToggle />
+                <div className="hidden lg:flex items-center gap-5">
+                    <LanguageSwitcher />
+                    <DarkModeToggle menuType="desktop" />
+                </div>
                 <Dialog
                     as="div"
-                    className="lg:hidden"
+                    className="lg:hidden dark:text-slate-100"
                     open={mobileMenuOpen}
                     onClose={setMobileMenuOpen}
                 >
@@ -78,24 +85,40 @@ export function Navbar() {
                                 />
                             </button>
                         </div>
-                        <div className="mt-6 flow-root">
-                            <div className="-my-6">
-                                <div className="space-y-2 py-6">
-                                    {config.navigation.map((item) => (
-                                        <HashLink
-                                            key={item.name}
-                                            to={item.href}
-                                            elementId={item.scrollTo}
-                                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-neutral-800"
-                                            onClick={() =>
-                                                setMobileMenuOpen(false)
-                                            }
-                                        >
-                                            {item.name}
-                                        </HashLink>
-                                    ))}
-                                </div>
+                        <div className="mt-6 flex flex-col divide-y">
+                            <div className="pb-2 space-y-2">
+                                {config.navigation.map((item) => (
+                                    <HashLink
+                                        key={item.id}
+                                        to={item.href}
+                                        elementId={item.scrollTo}
+                                        className="block rounded-lg pl-2 py-2 font-semibold text-gray-900 hover:bg-slate-200 dark:text-slate-200 dark:hover:bg-neutral-800"
+                                        onClick={() =>
+                                            setMobileMenuOpen(false)
+                                        }
+                                    >
+                                        {t(`nav.${item.id}`)}
+                                    </HashLink>
+                                ))}
                             </div>
+                            <div className="pt-2 space-y-2">
+                                <span className="block text-center font-bold text-lg">Languages</span>
+                                {Object.entries(config.languages).map(([symbol, langInfo]) => (
+                                    <button
+                                        key={symbol}
+                                        className={`${i18n.resolvedLanguage == symbol ? "font-bold text-emerald-500 dark:text-emerald-400" : ""} block rounded-lg pl-2 py-2 text-left font-semibold w-full hover:bg-slate-200 dark:hover:bg-neutral-800`}
+                                        onClick={() => {
+                                            setMobileMenuOpen(false);
+                                            void i18n.changeLanguage(symbol);
+                                        }}
+                                    >
+                                        {langInfo.nativeName}
+                                    </button>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="absolute left-6 bottom-6">
+                            <DarkModeToggle menuType="mobile" />
                         </div>
                     </Dialog.Panel>
                 </Dialog>
@@ -104,7 +127,7 @@ export function Navbar() {
     );
 }
 
-function DarkModeToggle() {
+function DarkModeToggle({ menuType }: { menuType: "desktop" | "mobile" }) {
     const [darkModeOn, setDarkMode] = useState(true);
 
     useEffect(() => {
@@ -131,9 +154,14 @@ function DarkModeToggle() {
         setDarkMode(!darkModeOn);
     };
 
+    const btnClass = classNames({
+        "hidden lg:block lg:h-8 lg:w-8": menuType == "desktop",
+        "block h-8 w-8": menuType == "mobile"
+    });
+
     return (
-        <button className="hidden lg:block lg:h-8 lg:w-8" onClick={toggle}>
-            {darkModeOn ? <SunIcon className="invert" /> : <MoonIcon />}
+        <button className={btnClass} onClick={toggle}>
+            {darkModeOn ? <SunIcon /> : <MoonIcon />}
         </button>
     );
 }

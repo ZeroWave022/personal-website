@@ -8,6 +8,7 @@ import ErrorPage from "./routes/error.tsx";
 import About from "./routes/about.tsx";
 import Index from "./routes/index.tsx";
 
+import "@root/i18n.ts";
 import "./index.css";
 
 const router = createBrowserRouter([

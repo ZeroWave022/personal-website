@@ -1,0 +1,40 @@
+{
+    "index": {
+        "intro": {
+            "hello": "Cześć! Jestem Martin",
+            "scrollingSubheader": "<0>Tworzę <1><0><0>strony internetowe</0><1>gry</1><2>platformy</2><3>skrypty</3><4>projekty</4><5>strony internetowe</5></0></1></0> spełniające nowoczesne oczekiwania",
+            "description": "Uważam że tworzenie produktów, które zapewniają użyteczność, ułatwiają życie i inspirują inne projekty jest cenne. Kiedy w 2017 roku po raz pierwszy zacząłem eksperymentować z programowaniem, przekonałem się, że może ono dostarczyć produkty, które inni cenią i które są przydatne. Dlatego nadal programuje i każdego dnia uczę się czegoś nowego.",
+            "toolsHeader": "Z czego korzystam?",
+            "toolsImgAlt": "Ikony jezyków programowania, technologii i innych narzędzi"
+        },
+        "skills": {
+            "title": "Kompetencje",
+            "duration_one": "{{count}} lat doświadczenia",
+            "duration_other": "{{count}} lat doświadczenia",
+            "note": "Uwaga: Liczby są <2>w stosunku</2> do siebie."
+        },
+        "projects": {
+            "title1": "Projekt 1: <1>Discover</1> <3>Poland</3>",
+            "description1": "Wiele osób nie odwiedziło jeszcze Polski. Discover Poland jest stroną internetową o atrakcjach turystycznych w Polsce, która zachęca do odkrycia ❤️ Europy.",
+            "title2": "Projekt 2: MusicVision",
+            "description2": "MusicVision jest eksperymentalnym projektem mającym na celu stworzenie panelu Spotify zawierającego Twoich najpopularniejszych artystów, utwory, historyczne dane na temat Twojej muzyki i kontrolę odtwarzania. Obecnie MusicVision nie jest dostępny jako strona internetowa, ale kod jest upubliczniony i można go obejrzeć na GitHub.",
+            "title3": "Projekt 3: yr-weather",
+            "description3": "<0>yr-weather</0> to biblioteka do Pythona umożliwiająca pobierania danych pogodowych z interfejsów API Norweskiego Institutu Meteorologicznego. Korzystanie z nich jest całkowicie darmowe, a celem biblioteki jest tego uproszczenie.",
+            "techUsed": "Wykorzystane technologie: {{tech, list}}",
+            "socialifyNote": "Obraz jest dostarczony przez <1>socialify</1>."
+        }
+    },
+    "common": {
+        "visit": "Odwiedź {{destination}}",
+        "browseCode": "Przeglądaj kod"
+    },
+    "nav": {
+        "home": "Strona główna",
+        "skills": "Kompetencje",
+        "projects": "Projekty",
+        "about": "O mnie"
+    },
+    "footer": {
+        "title": "Moje portfolio"
+    }
+}

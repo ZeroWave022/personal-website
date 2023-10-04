@@ -1,22 +1,22 @@
 {
     "navigation": [
         {
-            "name": "Home",
+            "id": "home",
             "href": "/",
             "scrollTo": "top"
         },
         {
-            "name": "Skills",
+            "id": "skills",
             "href": "/",
             "scrollTo": "skills"
         },
         {
-            "name": "Projects",
+            "id": "projects",
             "href": "/",
             "scrollTo": "projects"
         },
         {
-            "name": "About",
+            "id": "about",
             "href": "/about",
             "scrollTo": "top"
         }
