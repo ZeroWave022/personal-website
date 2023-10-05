@@ -53,10 +53,10 @@ export default function Index() {
                     </h1>
                     <div className="flex flex-col">
                         <Trans i18nKey="index.intro.scrollingSubheader">
-                            <div className="whitespace-nowrap">
+                            <div>
                                 I create
-                                <span className="ml-2 inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-green-600 dark:text-emerald-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]">
-                                    <ul className="block animate-slide-items-5 leading-tight">
+                                <span className="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-green-600 dark:text-emerald-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]">
+                                    <ul className="block animate-slide-items-5 leading-tight [&_li]:whitespace-nowrap">
                                         <li>websites</li>
                                         <li>games</li>
                                         <li>frameworks</li>
