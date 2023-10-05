@@ -9,7 +9,9 @@
         },
         "skills": {
             "title": "Kompetencje",
-            "duration_one": "{{count}} lat doświadczenia",
+            "duration_one": "{{count}} rok doświadczenia",
+            "duration_few": "{{count}} lata doświadczenia",
+            "duration_many": "{{count}} lat doświadczenia",
             "duration_other": "{{count}} lat doświadczenia",
             "note": "Uwaga: Liczby są <2>w stosunku</2> do siebie."
         },
