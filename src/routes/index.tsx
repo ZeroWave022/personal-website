@@ -2,6 +2,8 @@ import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
 import { Trans, useTranslation } from "react-i18next";
 
+import { SnapSection } from "../components/SnapSection";
+
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
 
@@ -43,10 +45,7 @@ export default function Index() {
 
     return (
         <>
-            <section
-                id="top"
-                className="flex snap-start snap-always flex-col gap-12 dark:text-slate-200 lg:flex-row lg:justify-center mdh:h-screen"
-            >
+            <SnapSection id="top" snap="start" className="flex flex-col gap-12 dark:text-slate-200 lg:flex-row lg:justify-center">
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
                         {t("index.intro.hello")}
@@ -83,12 +82,9 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </SnapSection>
 
-            <section
-                id="skills"
-                className="snap-start snap-always mdh:h-screen"
-            >
+            <SnapSection id="skills" snap="start">
                 <h1>{t("index.skills.title")}</h1>
                 <div className="mx-auto my-5 grid w-[80vw] grid-cols-2 items-center justify-items-center gap-5 md:w-fit lg:grid-cols-3">
                     {experienceList.map((item) => (
@@ -123,12 +119,9 @@ export default function Index() {
                         to each other.
                     </Trans>
                 </p>
-            </section>
+            </SnapSection>
 
-            <section
-                id="projects"
-                className="snap-start snap-always mdh:h-screen"
-            >
+            <SnapSection id="projects" snap="start">
                 <h1>
                     <Trans i18nKey="index.projects.title1">
                         Project 1: Discover{" "}
@@ -168,9 +161,9 @@ export default function Index() {
                         />
                     </a>
                 </div>
-            </section>
+            </SnapSection>
 
-            <section className="snap-start snap-always mdh:h-screen">
+            <SnapSection snap="start">
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-8">
@@ -205,9 +198,9 @@ export default function Index() {
                         />
                     </a>
                 </div>
-            </section>
+            </SnapSection>
 
-            <section className="snap-start snap-always mdh:h-screen">
+            <SnapSection snap="start">
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-8">
@@ -260,7 +253,7 @@ export default function Index() {
                         </p>
                     </div>
                 </div>
-            </section>
+            </SnapSection>
         </>
     );
 }

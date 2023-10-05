@@ -1,7 +1,9 @@
+import { SnapSection } from "../components/SnapSection";
+
 export default function About() {
     return (
         <>
-            <section id="top" className="h-screen snap-start snap-always">
+            <SnapSection id="top" snap="start">
                 <h1>This is an about me page</h1>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -71,7 +73,7 @@ export default function About() {
                     luctus et ultrices posuere cubilia curae; Aenean malesuada
                     pretium ultrices.
                 </p>
-            </section>
+            </SnapSection>
         </>
     );
 }
