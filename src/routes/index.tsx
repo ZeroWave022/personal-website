@@ -2,7 +2,8 @@ import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
 import { Trans, useTranslation } from "react-i18next";
 
-import { SnapSection } from "../components/SnapSection";
+import { SnapSection } from "@components/SnapSection";
+import { ProjectImage } from "@components/ProjectImage";
 
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
@@ -148,18 +149,12 @@ export default function Index() {
                             })}
                         </LargeLink>
                     </div>
-                    <a
-                        className="inline-block w-[90vw] cursor-pointer overflow-hidden rounded-md bg-white py-5 md:max-w-[45vw]"
+                    <ProjectImage
+                        imgSrc={discover_poland}
+                        imgAlt="Discover Poland"
                         href="https://discoverpoland.netlify.app"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <img
-                            className="w-full transition duration-700 ease-in-out hover:scale-[102%]"
-                            src={discover_poland}
-                            alt="Discover Poland"
-                        />
-                    </a>
+                        wrapperClassName="bg-white py-5"
+                    />
                 </div>
             </SnapSection>
 
@@ -185,18 +180,12 @@ export default function Index() {
                             {t("common.browseCode")}
                         </LargeLink>
                     </div>
-                    <a
-                        className="inline-block w-[90vw] cursor-pointer overflow-hidden rounded-md bg-[#e4dccf] p-5 md:max-w-[45vw]"
+                    <ProjectImage
+                        imgSrc={musicvision}
+                        imgAlt="MusicVision"
                         href="https://github.com/ZeroWave022/MusicVision"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
-                        <img
-                            className="w-full transition duration-700 ease-in-out hover:scale-[102%]"
-                            src={musicvision}
-                            alt="MusicVision"
-                        />
-                    </a>
+                        wrapperClassName="bg-[#e4dccf] p-5"
+                    />
                 </div>
             </SnapSection>
 
@@ -225,18 +214,11 @@ export default function Index() {
                         </LargeLink>
                     </div>
                     <div className="flex flex-col items-center gap-2.5">
-                        <a
-                            className="inline-block w-[90vw] cursor-pointer overflow-hidden rounded-md md:max-w-[45vw]"
+                        <ProjectImage
+                            imgSrc="https://socialify.git.ci/ZeroWave022/yr-weather/image?description=1&descriptionEditable=Fetch%20weather%20data%20the%20from%20Norwegian%20Meteorological%20Institute%27s%20APIs%20easily.&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark"
+                            imgAlt="yr-weather"
                             href="https://github.com/ZeroWave022/yr-weather"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <img
-                                className="w-full transition duration-700 ease-in-out hover:scale-[102%]"
-                                src="https://socialify.git.ci/ZeroWave022/yr-weather/image?description=1&descriptionEditable=Fetch%20weather%20data%20the%20from%20Norwegian%20Meteorological%20Institute%27s%20APIs%20easily.&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark"
-                                alt="yr-weather"
-                            />
-                        </a>
+                        />
                         <p>
                             <Trans i18nKey="index.projects.socialifyNote">
                                 The image is provided by{" "}
