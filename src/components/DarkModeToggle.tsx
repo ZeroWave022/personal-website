@@ -2,7 +2,11 @@ import { useState, useEffect } from "react";
 import classNames from "classnames";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
 
-export function DarkModeToggle({ menuType }: { menuType: "desktop" | "mobile" }) {
+interface DarkModeToggleProps {
+    menuType: "desktop" | "mobile";
+}
+
+export function DarkModeToggle({ menuType }: DarkModeToggleProps) {
     const [darkModeOn, setDarkMode] = useState(true);
 
     useEffect(() => {

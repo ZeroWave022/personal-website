@@ -46,7 +46,11 @@ export default function Index() {
 
     return (
         <>
-            <SnapSection id="top" snap="start" className="flex flex-col gap-12 dark:text-slate-200 lg:flex-row lg:justify-center">
+            <SnapSection
+                id="top"
+                snap="start"
+                className="flex flex-col gap-12 dark:text-slate-200 lg:flex-row lg:justify-center"
+            >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
                         {t("index.intro.hello")}

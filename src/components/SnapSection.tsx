@@ -5,16 +5,21 @@ interface SnapSectionProps extends React.ComponentPropsWithoutRef<"section"> {
     snap: "start" | "center" | "end";
 }
 
-export function SnapSection({ children, className, snap, ...attributes }: SnapSectionProps) {
+export function SnapSection({
+    children,
+    className,
+    snap,
+    ...attributes
+}: SnapSectionProps) {
     const allClasses = classNames("snap-always mdh:h-screen", className, {
         "snap-start": snap == "start",
         "snap-center": snap == "center",
-        "snap-end": snap == "end"
+        "snap-end": snap == "end",
     });
 
     return (
-        <section className={allClasses} {...attributes} >
+        <section className={allClasses} {...attributes}>
             {children}
         </section>
-    )
+    );
 }

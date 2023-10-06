@@ -32,22 +32,26 @@ export function LanguageSwitcher() {
             >
                 <Menu.Items className="absolute left-1/2 top-full z-10 my-1 flex -translate-x-1/2 flex-col gap-2 rounded-md bg-slate-100 p-2.5 shadow-md dark:bg-neutral-700">
                     {/* Iterate over all entries of languages and add buttons with dynamic styling */}
-                    {Object.entries(config.languages).map(([symbol, langInfo]) => (
-                        <Menu.Item key={symbol}>
-                            {({ active }) => (
-                                <button
-                                    className={`${genBtnClass(
-                                        active,
-                                        i18n.resolvedLanguage == symbol,
-                                    )} rounded-md p-1`}
-                                    onClick={() => void i18n.changeLanguage(symbol)}
-                                    type="submit"
-                                >
-                                    {langInfo.nativeName}
-                                </button>
-                            )}
-                        </Menu.Item>
-                    ))}
+                    {Object.entries(config.languages).map(
+                        ([symbol, langInfo]) => (
+                            <Menu.Item key={symbol}>
+                                {({ active }) => (
+                                    <button
+                                        className={`${genBtnClass(
+                                            active,
+                                            i18n.resolvedLanguage == symbol,
+                                        )} rounded-md p-1`}
+                                        onClick={() =>
+                                            void i18n.changeLanguage(symbol)
+                                        }
+                                        type="submit"
+                                    >
+                                        {langInfo.nativeName}
+                                    </button>
+                                )}
+                            </Menu.Item>
+                        ),
+                    )}
                 </Menu.Items>
             </Transition>
         </Menu>
