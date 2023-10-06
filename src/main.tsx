@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import Loading from "./routes/loading.tsx";
 import Layout from "./routes/layout.tsx";
 import ErrorPage from "./routes/error.tsx";
-
 import About from "./routes/about.tsx";
 import Index from "./routes/index.tsx";
 
@@ -30,7 +30,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-    <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>,
+    <React.Suspense fallback={<Loading />}>
+        <React.StrictMode>
+            <RouterProvider router={router} />
+        </React.StrictMode>
+    </React.Suspense>,
 );
