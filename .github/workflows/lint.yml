@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: ESLint
-        run: eslint . --ext ts,tsx --max-warnings 0
+        run: npm run lint
       - name: Prettier
         run: npx prettier . --check
