@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Loading from "./routes/loading.tsx";
 import Layout from "./routes/layout.tsx";
-import ErrorPage from "./routes/error.tsx";
+import Error from "./routes/error.tsx";
 import About from "./routes/about.tsx";
 import Index from "./routes/index.tsx";
 
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     {
         path: "/",
         element: <Layout />,
-        errorElement: <ErrorPage />,
+        errorElement: <Error />,
         children: [
             {
                 index: true,
