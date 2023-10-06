@@ -38,5 +38,10 @@
     },
     "footer": {
         "title": "Moje portfolio"
+    },
+    "error": {
+        "header": "Przepraszamy!",
+        "subheader": "Wystąpił nieoczekiwany błąd",
+        "goBack": "Wróć na stronę główną"
     }
 }

@@ -36,5 +36,10 @@
     },
     "footer": {
         "title": "Mitt portefølje"
+    },
+    "error": {
+        "header": "Beklager!",
+        "subheader": "Det har oppstått en feil",
+        "goBack": "Tilbake hjem"
     }
 }

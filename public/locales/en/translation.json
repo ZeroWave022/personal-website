@@ -36,5 +36,10 @@
     },
     "footer": {
         "title": "My Portfolio"
+    },
+    "error": {
+        "header": "Sorry!",
+        "subheader": "An unexpected error has occured",
+        "goBack": "Back to Home"
     }
 }
