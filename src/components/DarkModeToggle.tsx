@@ -7,31 +7,26 @@ interface DarkModeToggleProps {
 }
 
 export function DarkModeToggle({ menuType }: DarkModeToggleProps) {
-    const [darkModeOn, setDarkMode] = useState(true);
+    const darkModePreferred = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+    ).matches;
+
+    const customPreference = localStorage.getItem("darkModeOn");
+
+    // Set the state to the manually selected preference, otherwise use the media query
+    const [darkModeOn, setDarkMode] = useState(
+        !customPreference ? darkModePreferred : customPreference == "true",
+    );
 
     useEffect(() => {
-        const darkModePreferred = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-        ).matches;
-
-        if (darkModePreferred) {
-            document.documentElement.classList.add("dark");
-            setDarkMode(true);
-        } else {
-            document.documentElement.classList.remove("dark");
-            setDarkMode(false);
-        }
-    }, []);
-
-    const toggle = () => {
         if (darkModeOn) {
-            document.documentElement.classList.remove("dark");
-        } else {
             document.documentElement.classList.add("dark");
+            localStorage.setItem("darkModeOn", "true");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("darkModeOn", "false");
         }
-
-        setDarkMode(!darkModeOn);
-    };
+    }, [darkModeOn]);
 
     const btnClass = classNames({
         "hidden lg:block lg:h-8 lg:w-8": menuType == "desktop",
@@ -39,7 +34,7 @@ export function DarkModeToggle({ menuType }: DarkModeToggleProps) {
     });
 
     return (
-        <button className={btnClass} onClick={toggle}>
+        <button className={btnClass} onClick={() => setDarkMode(!darkModeOn)}>
             {darkModeOn ? <SunIcon /> : <MoonIcon />}
         </button>
     );
