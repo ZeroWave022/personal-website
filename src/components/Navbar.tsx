@@ -1,17 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
-import classNames from "classnames";
 import { Dialog } from "@headlessui/react";
-import {
-    Bars3Icon,
-    XMarkIcon,
-    SunIcon,
-    MoonIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 import config from "@root/config.json";
 import { LanguageSwitcher } from "@components/LanguageSwitcher.tsx";
+import { DarkModeToggle } from "@components/DarkModeToggle";
 
 import logo from "@assets/logo.png";
 
@@ -141,44 +136,5 @@ export function Navbar() {
                 </Dialog>
             </nav>
         </>
-    );
-}
-
-function DarkModeToggle({ menuType }: { menuType: "desktop" | "mobile" }) {
-    const [darkModeOn, setDarkMode] = useState(true);
-
-    useEffect(() => {
-        const darkModePreferred = window.matchMedia(
-            "(prefers-color-scheme: dark)",
-        ).matches;
-
-        if (darkModePreferred) {
-            document.documentElement.classList.add("dark");
-            setDarkMode(true);
-        } else {
-            document.documentElement.classList.remove("dark");
-            setDarkMode(false);
-        }
-    }, []);
-
-    const toggle = () => {
-        if (darkModeOn) {
-            document.documentElement.classList.remove("dark");
-        } else {
-            document.documentElement.classList.add("dark");
-        }
-
-        setDarkMode(!darkModeOn);
-    };
-
-    const btnClass = classNames({
-        "hidden lg:block lg:h-8 lg:w-8": menuType == "desktop",
-        "block h-8 w-8": menuType == "mobile",
-    });
-
-    return (
-        <button className={btnClass} onClick={toggle}>
-            {darkModeOn ? <SunIcon /> : <MoonIcon />}
-        </button>
     );
 }
