@@ -7,7 +7,7 @@ i18n.use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        debug: true,
+        debug: false,
         load: "languageOnly",
         ns: "translation",
         defaultNS: "translation",
