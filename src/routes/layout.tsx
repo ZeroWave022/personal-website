@@ -6,7 +6,7 @@ import { Footer } from "@components/Footer";
 export default function Layout() {
     return (
         <>
-            <div className="h-screen scroll-pt-20 overflow-auto scroll-smooth mdh:snap-y mdh:snap-mandatory">
+            <div className="h-screen overflow-auto scroll-smooth mdh:snap-y mdh:snap-mandatory">
                 <header className="sticky top-0 z-50">
                     <Navbar />
                 </header>

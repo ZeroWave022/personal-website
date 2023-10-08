@@ -1,6 +1,7 @@
 import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
 import { Trans, useTranslation } from "react-i18next";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 import { SnapSection } from "@components/SnapSection";
 import { ProjectImage } from "@components/ProjectImage";
@@ -49,7 +50,7 @@ export default function Index() {
             <SnapSection
                 id="top"
                 snap="start"
-                className="flex flex-col gap-12 dark:text-slate-200 lg:flex-row lg:justify-center"
+                className="relative flex flex-col items-center justify-center gap-12 dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
@@ -75,7 +76,6 @@ export default function Index() {
                     </div>
                 </div>
                 <div className="m-2.5 lg:max-w-3xl">
-                    <p>{t("index.intro.description")}</p>
                     <div className="mt-2.5">
                         <h2>{t("index.intro.toolsHeader")}</h2>
                         <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
@@ -87,6 +87,7 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
+                <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
             </SnapSection>
 
             <SnapSection id="skills" snap="start">

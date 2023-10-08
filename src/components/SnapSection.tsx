@@ -11,7 +11,7 @@ export function SnapSection({
     snap,
     ...attributes
 }: SnapSectionProps) {
-    const allClasses = classNames("snap-always mdh:h-screen", className, {
+    const allClasses = classNames("pt-20 snap-always mdh:h-screen", className, {
         "snap-start": snap == "start",
         "snap-center": snap == "center",
         "snap-end": snap == "end",
