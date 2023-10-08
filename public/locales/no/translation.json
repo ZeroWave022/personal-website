@@ -24,9 +24,15 @@
             "socialifyNote": "Bildet er levert av <2>socialify</2>."
         }
     },
+    "about": {
+        "title": "Om",
+        "description": "Jeg håper nettsiden min gjorde deg interessert i arbeidet mitt. Jeg har hatt det veldig gøy å lage den! Teknologiene som brukes er blant annet Typescript, React Router, Tailwind CSS og i18n. Ved spørsmål om nettsiden eller noen andre av mine prosjekter, ta gjerne kontakt!",
+        "browseCode": "Bla gjennom koden til denne nettsiden"
+    },
     "common": {
         "visit": "Besøk {{destination}}",
-        "browseCode": "Bla gjennom kode"
+        "browseCode": "Bla gjennom kode",
+        "goBack": "Tilbake hjem"
     },
     "nav": {
         "home": "Hjem",
@@ -39,7 +45,6 @@
     },
     "error": {
         "header": "Beklager!",
-        "subheader": "Det har oppstått en feil",
-        "goBack": "Tilbake hjem"
+        "subheader": "Det har oppstått en feil"
     }
 }

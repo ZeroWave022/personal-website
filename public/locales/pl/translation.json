@@ -26,22 +26,27 @@
             "socialifyNote": "Obraz jest dostarczony przez <2>socialify</2>."
         }
     },
+    "about": {
+        "title": "O stronie",
+        "description": "Mam nadzieję, że moja strona zainteresowała Cię moją pracą. Stworzenie jej sprawiło mi dużo przyjemności! Wykorzystane technologie między innymi Typescript, React Router, Tailwind CSS oraz i18n. W przypadku pytań dotyczących tej strony lub innych moich projektów, smiało proszę o kontakt!",
+        "browseCode": "Przeglądaj kod strony"
+    },
     "common": {
         "visit": "Odwiedź {{destination}}",
-        "browseCode": "Przeglądaj kod"
+        "browseCode": "Przeglądaj kod",
+        "goBack": "Wróć na stronę główną"
     },
     "nav": {
         "home": "Strona główna",
         "skills": "Kompetencje",
         "projects": "Projekty",
-        "about": "O mnie"
+        "about": "O stronie"
     },
     "footer": {
         "title": "Moje portfolio"
     },
     "error": {
         "header": "Przepraszamy!",
-        "subheader": "Wystąpił nieoczekiwany błąd",
-        "goBack": "Wróć na stronę główną"
+        "subheader": "Wystąpił nieoczekiwany błąd"
     }
 }

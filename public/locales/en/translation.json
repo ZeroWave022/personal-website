@@ -24,9 +24,15 @@
             "socialifyNote": "The image is provided by <2>socialify</2>."
         }
     },
+    "about": {
+        "title": "About",
+        "description": "I hope my website made you interested in my work. I've had a lot of fun making it! The technologies used are, among others, Typescript, React Router, Tailwind CSS and i18n. In case of questions about the website or any other of my projects, feel free to contact me!",
+        "browseCode": "Browse this website's code"
+    },
     "common": {
         "visit": "Visit {{destination}}",
-        "browseCode": "Browse code"
+        "browseCode": "Browse code",
+        "goBack": "Back to Home"
     },
     "nav": {
         "home": "Home",
@@ -39,7 +45,6 @@
     },
     "error": {
         "header": "Sorry!",
-        "subheader": "An unexpected error has occured",
-        "goBack": "Back to Home"
+        "subheader": "An unexpected error has occured"
     }
 }

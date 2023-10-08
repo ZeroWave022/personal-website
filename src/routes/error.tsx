@@ -24,7 +24,7 @@ export default function Error() {
                     </span>
                 </div>
                 <LargeLink color="green-light" link="/" internal={true}>
-                    {t("error.goBack")}
+                    {t("common.goBack")}
                 </LargeLink>
             </main>
         </>
