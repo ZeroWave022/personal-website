@@ -3,7 +3,6 @@
         "intro": {
             "hello": "Cześć! Jestem Martin",
             "scrollingSubheader": "<0>Tworzę <1><0><0>strony internetowe</0><1>gry</1><2>platformy</2><3>skrypty</3><4>projekty</4><5>strony internetowe</5></0></1></0> spełniające nowoczesne oczekiwania",
-            "description": "Uważam że tworzenie produktów, które zapewniają użyteczność, ułatwiają życie i inspirują inne projekty jest cenne. Kiedy w 2017 roku po raz pierwszy zacząłem eksperymentować z programowaniem, przekonałem się, że może ono dostarczyć produkty, które inni cenią i które są przydatne. Dlatego nadal programuje i każdego dnia uczę się czegoś nowego.",
             "toolsHeader": "Z czego korzystam?",
             "toolsImgAlt": "Ikony jezyków programowania, technologii i innych narzędzi"
         },
@@ -28,7 +27,10 @@
     },
     "about": {
         "title": "O stronie",
-        "description": "Mam nadzieję, że moja strona zainteresowała Cię moją pracą. Stworzenie jej sprawiło mi dużo przyjemności! Wykorzystane technologie między innymi Typescript, React Router, Tailwind CSS oraz i18n. W przypadku pytań dotyczących tej strony lub innych moich projektów, smiało proszę o kontakt!",
+        "description": {
+            "part1": "Uważam że tworzenie produktów, które zapewniają użyteczność, ułatwiają życie i inspirują inne projekty jest cenne. Kiedy w 2017 roku po raz pierwszy zacząłem eksperymentować z programowaniem, przekonałem się, że może ono dostarczyć produkty, które inni cenią i które są przydatne. Dlatego nadal programuje i każdego dnia uczę się czegoś nowego.",
+            "part2": "Mam nadzieję, że moja strona zainteresowała Cię moją pracą. Stworzenie jej sprawiło mi dużo przyjemności! Wykorzystane technologie między innymi Typescript, React Router, Tailwind CSS oraz i18n. W przypadku pytań dotyczących tej strony lub innych moich projektów, smiało proszę o kontakt!"
+        },
         "browseCode": "Przeglądaj kod strony"
     },
     "common": {

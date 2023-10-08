@@ -17,3 +17,7 @@ h3 {
 p {
     @apply dark:text-slate-200;
 }
+
+.anim-delay-5000 {
+    animation-delay: 5000ms;
+}

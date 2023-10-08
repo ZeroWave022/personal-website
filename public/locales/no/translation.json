@@ -3,7 +3,6 @@
         "intro": {
             "hello": "Hei! Jeg er Martin",
             "scrollingSubheader": "<0>Jeg lager <1><0><0>nettsider</0><1>spill</1><2>rammeverk</2><3>scripter</3><4>prosjekter</4><5>nettsider</5></0></1></0> som oppfyller moderne krav",
-            "description": "Jeg mener det er svært verdifullt å utvikle produkter som er til nytte, gjør livet enklere og gir inspirasjon til andre prosjekter. Da jeg først begynte å eksperimentere med programmering i 2017, lærte jeg at det kan skape produkter som andre liker og finner nyttige. Derfor koder jeg fortsatt i dag, og lærer noe nytt hver dag.",
             "toolsHeader": "Hva bruker jeg?",
             "toolsImgAlt": "Ikoner av programmeringsspråk, teknologier og mer"
         },
@@ -26,7 +25,10 @@
     },
     "about": {
         "title": "Om",
-        "description": "Jeg håper nettsiden min gjorde deg interessert i arbeidet mitt. Jeg har hatt det veldig gøy å lage den! Teknologiene som brukes er blant annet Typescript, React Router, Tailwind CSS og i18n. Ved spørsmål om nettsiden eller noen andre av mine prosjekter, ta gjerne kontakt!",
+        "description": {
+            "part1": "Jeg mener det er svært verdifullt å utvikle produkter som er til nytte, gjør livet enklere og gir inspirasjon til andre prosjekter. Da jeg først begynte å eksperimentere med programmering i 2017, lærte jeg at det kan skape produkter som andre liker og finner nyttige. Derfor koder jeg fortsatt i dag, og lærer noe nytt hver dag.",
+            "part2": "Jeg håper nettsiden min gjorde deg interessert i arbeidet mitt. Jeg har hatt det veldig gøy å lage den! Teknologiene som brukes er blant annet Typescript, React Router, Tailwind CSS og i18n. Ved spørsmål om nettsiden eller noen andre av mine prosjekter, ta gjerne kontakt!"
+        },
         "browseCode": "Bla gjennom koden til denne nettsiden"
     },
     "common": {

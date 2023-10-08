@@ -3,7 +3,6 @@
         "intro": {
             "hello": "Hey! I'm Martin",
             "scrollingSubheader": "<0>I create <1><0><0>websites</0><1>games</1><2>frameworks</2><3>scripts</3><4>projects</4><5>websites</5></0></1></0> matching modern expectations",
-            "description": "I see developing products which provide utility, make lives easier and provide inspiration for other projects as highly valuable. When I first started experimenting with programming in 2017, I learned that it can provide products which other people enjoy and find useful. That's why I still code today, and learn something new every day.",
             "toolsHeader": "What do I use?",
             "toolsImgAlt": "Icons of programming languages, technologies and more"
         },
@@ -26,7 +25,10 @@
     },
     "about": {
         "title": "About",
-        "description": "I hope my website made you interested in my work. I've had a lot of fun making it! The technologies used are, among others, Typescript, React Router, Tailwind CSS and i18n. In case of questions about the website or any other of my projects, feel free to contact me!",
+        "description": {
+            "part1": "I see developing products which provide utility, make lives easier and provide inspiration for other projects as highly valuable. When I first started experimenting with programming in 2017, I learned that it can provide products which other people enjoy and find useful. That's why I still code today, and learn something new every day.",
+            "part2": "I hope my website made you interested in my work. I've had a lot of fun making it! The technologies used are, among others, Typescript, React Router, Tailwind CSS and i18n. In case of questions about the website or any other of my projects, feel free to contact me!"
+        },
         "browseCode": "Browse this website's code"
     },
     "common": {

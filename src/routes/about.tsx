@@ -11,7 +11,8 @@ export default function About() {
             <SnapSection id="top" snap="start">
                 <div className="flex flex-col items-center gap-5">
                     <h1>{t("about.title")}</h1>
-                    <p>{t("about.description")}</p>
+                    <p>{t("about.description.part1")}</p>
+                    <p>{t("about.description.part2")}</p>
                     <div className="flex flex-col items-center justify-center gap-2">
                         <LargeLink
                             color="green-light"

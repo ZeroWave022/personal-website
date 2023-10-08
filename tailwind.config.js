@@ -7,6 +7,7 @@ export default {
             animation: {
                 "slide-items-5":
                     "slide-items-5 12.5s cubic-bezier(0.85, 0, 0.15, 1) infinite",
+                "scroll-icon-bounce": "scroll-icon-bounce 1s infinite",
             },
             keyframes: {
                 "slide-items-5": {
@@ -27,6 +28,18 @@ export default {
                     },
                     "100%": {
                         transform: "translateY(-83.33%)",
+                    },
+                },
+                "scroll-icon-bounce": {
+                    "0%, 100%": {
+                        transform: "translate(-50%, 0%)",
+                        "animation-timing-function":
+                            "cubic-bezier(0.8, 0, 1, 1)",
+                    },
+                    "50%": {
+                        transform: "translate(-50%, 25%)",
+                        "animation-timing-function":
+                            "cubic-bezier(0, 0, 0.2, 1)",
                     },
                 },
             },
