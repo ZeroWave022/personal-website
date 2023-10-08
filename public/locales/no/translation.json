@@ -38,7 +38,8 @@
         "home": "Hjem",
         "skills": "Kompetanse",
         "projects": "Prosjekter",
-        "about": "Om"
+        "about": "Om",
+        "language": "Språk"
     },
     "footer": {
         "title": "Mitt portefølje"

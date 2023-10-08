@@ -7,7 +7,7 @@ import config from "@root/config.json";
 import classNames from "classnames";
 
 export function LanguageSwitcher() {
-    const { i18n } = useTranslation();
+    const { t, i18n } = useTranslation();
 
     const genBtnClass = (active: boolean, lngSelected: boolean) => {
         return classNames({
@@ -19,7 +19,7 @@ export function LanguageSwitcher() {
     return (
         <Menu as="div" className="relative block">
             <Menu.Button className="flex items-center gap-1 rounded-md bg-slate-200 px-2 py-1 shadow-sm dark:bg-neutral-700">
-                Languages
+                {t("nav.language")}
                 <ChevronDownIcon className="h-4 w-4 duration-150 ease-in-out ui-open:-rotate-180" />
             </Menu.Button>
 

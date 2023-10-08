@@ -40,7 +40,8 @@
         "home": "Strona główna",
         "skills": "Kompetencje",
         "projects": "Projekty",
-        "about": "O stronie"
+        "about": "O stronie",
+        "language": "Język"
     },
     "footer": {
         "title": "Moje portfolio"

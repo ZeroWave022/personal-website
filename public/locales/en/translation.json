@@ -38,7 +38,8 @@
         "home": "Home",
         "skills": "Skills",
         "projects": "Projects",
-        "about": "About"
+        "about": "About",
+        "language": "Language"
     },
     "footer": {
         "title": "My Portfolio"
