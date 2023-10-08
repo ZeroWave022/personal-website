@@ -16,7 +16,7 @@ export function Navbar() {
 
     return (
         <>
-            <nav className="text-md flex items-center justify-between bg-slate-100 px-6 py-1 font-semibold text-gray-900 shadow-md dark:bg-neutral-800 dark:text-slate-100 lg:px-8">
+            <nav className="text-md relative flex items-center justify-between bg-slate-100 px-6 py-1 font-semibold text-gray-900 shadow-md dark:bg-neutral-800 dark:text-slate-100 lg:px-8">
                 {/* Navbar logo */}
                 <div className="flex">
                     <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
@@ -40,7 +40,7 @@ export function Navbar() {
                     </button>
                 </div>
                 {/* Main links */}
-                <div className="hidden lg:flex lg:gap-x-6">
+                <div className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:gap-x-6">
                     {config.navigation.map((item) => (
                         <HashLink
                             key={item.id}
