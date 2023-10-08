@@ -18,27 +18,14 @@ export function Navbar() {
         <>
             <nav className="text-md relative flex items-center justify-between bg-slate-100 px-6 py-1 font-semibold text-gray-900 shadow-md dark:bg-neutral-800 dark:text-slate-100 lg:px-8">
                 {/* Navbar logo */}
-                <div className="flex">
-                    <HashLink to="/" elementId="top" className="-m-1.5 p-1.5">
-                        <span className="sr-only">Logo</span>
-                        <img
-                            className="h-12 w-auto invert dark:invert-0"
-                            src={logo}
-                            alt="Logo"
-                        />
-                    </HashLink>
-                </div>
-                {/* Mobile menu icon */}
-                <div className="flex lg:hidden">
-                    <button
-                        type="button"
-                        className="-m-2.5 p-2 text-black dark:text-slate-200"
-                        onClick={() => setMobileMenuOpen(true)}
-                    >
-                        <span className="sr-only">Open menu</span>
-                        <Bars3Icon className="h-8 w-8" aria-hidden="true" />
-                    </button>
-                </div>
+                <HashLink to="/" elementId="top">
+                    <span className="sr-only">Logo</span>
+                    <img
+                        className="h-12 w-auto invert dark:invert-0"
+                        src={logo}
+                        alt="Logo"
+                    />
+                </HashLink>
                 {/* Main links */}
                 <div className="hidden lg:absolute lg:left-1/2 lg:flex lg:-translate-x-1/2 lg:gap-x-6">
                     {config.navigation.map((item) => (
@@ -52,23 +39,32 @@ export function Navbar() {
                         </HashLink>
                     ))}
                 </div>
+                {/* Utilities shown top right on desktop */}
                 <div className="hidden items-center gap-5 lg:flex">
                     <LanguageSwitcher />
                     <DarkModeToggle menuType="desktop" />
                 </div>
+                {/* Mobile menu icon */}
+                <button
+                    type="button"
+                    className="p-0.5 text-black dark:text-slate-200 lg:hidden"
+                    onClick={() => setMobileMenuOpen(true)}
+                >
+                    <span className="sr-only">Open menu</span>
+                    <Bars3Icon className="h-8 w-8" aria-hidden="true" />
+                </button>
                 <Dialog
                     as="div"
                     className="dark:text-slate-100 lg:hidden"
                     open={mobileMenuOpen}
                     onClose={setMobileMenuOpen}
                 >
-                    <div className="fixed inset-0 z-50" />
                     <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto border-l-4 border-emerald-500 bg-slate-100 px-6 py-1 dark:bg-neutral-900 sm:max-w-sm">
                         <div className="flex justify-between">
                             <HashLink
                                 to="/"
                                 elementId="top"
-                                className="-m-1.5 p-1.5"
+                                onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Logo</span>
                                 <img
@@ -79,7 +75,7 @@ export function Navbar() {
                             </HashLink>
                             <button
                                 type="button"
-                                className="-m-2.5 p-2 text-gray-700 dark:text-slate-200"
+                                className="p-0.5 text-gray-700 dark:text-slate-200"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Close menu</span>
@@ -114,8 +110,8 @@ export function Navbar() {
                                             className={`${
                                                 i18n.resolvedLanguage == symbol
                                                     ? "font-bold text-emerald-500 dark:text-emerald-400"
-                                                    : ""
-                                            } block w-full rounded-lg py-2 pl-2 text-left font-semibold hover:bg-slate-200 dark:hover:bg-neutral-800`}
+                                                    : "font-semibold"
+                                            } block w-full rounded-lg py-2 pl-2 text-left hover:bg-slate-200 dark:hover:bg-neutral-800`}
                                             onClick={() => {
                                                 setMobileMenuOpen(false);
                                                 void i18n.changeLanguage(
