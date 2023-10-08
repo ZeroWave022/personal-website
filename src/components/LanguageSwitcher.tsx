@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { useTranslation } from "react-i18next";
 import { Menu, Transition } from "@headlessui/react";
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 
 import config from "@root/config.json";
 import classNames from "classnames";
@@ -17,8 +18,9 @@ export function LanguageSwitcher() {
 
     return (
         <Menu as="div" className="relative block">
-            <Menu.Button className="rounded-md bg-slate-200 p-1 shadow-sm dark:bg-neutral-700">
+            <Menu.Button className="flex items-center gap-1 rounded-md bg-slate-200 px-2 py-1 shadow-sm dark:bg-neutral-700">
                 Languages
+                <ChevronDownIcon className="h-4 w-4 duration-150 ease-in-out ui-open:-rotate-180" />
             </Menu.Button>
 
             <Transition
