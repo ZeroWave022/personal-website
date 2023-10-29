@@ -1,11 +1,12 @@
+import { HashLink } from "react-router-hash-link";
+import { Trans, useTranslation } from "react-i18next";
+
 import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
-import { Trans, useTranslation } from "react-i18next";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-
 import { SnapSection } from "@components/SnapSection";
 import { ProjectImage } from "@components/ProjectImage";
 
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
 
@@ -87,7 +88,9 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                <HashLink to="/" elementId="skills">
+                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                </HashLink>
             </SnapSection>
 
             <SnapSection id="skills" snap="start">
