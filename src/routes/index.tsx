@@ -50,7 +50,7 @@ export default function Index() {
             <SnapSection
                 id="top"
                 snap="start"
-                className="relative gap-12 dark:text-slate-200"
+                className="md-h:gap-12 relative dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
@@ -137,7 +137,7 @@ export default function Index() {
                     </Trans>
                 </h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>{t("index.projects.description1")}</p>
                         <p>
                             {t("index.projects.techUsed", {
@@ -166,7 +166,7 @@ export default function Index() {
             <SnapSection snap="start">
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>{t("index.projects.description2")}</p>
                         <p className="m-0">
                             {t("index.projects.techUsed", {
@@ -197,7 +197,7 @@ export default function Index() {
             <SnapSection snap="start">
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>
                             <Trans i18nKey="index.projects.description3">
                                 <code>yr-weather</code> is a Python library to
