@@ -1,11 +1,12 @@
+import { HashLink } from "react-router-hash-link";
+import { Trans, useTranslation } from "react-i18next";
+
 import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
-import { Trans, useTranslation } from "react-i18next";
-import { ChevronDownIcon } from "@heroicons/react/24/outline";
-
 import { SnapSection } from "@components/SnapSection";
 import { ProjectImage } from "@components/ProjectImage";
 
+import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
 
@@ -50,7 +51,7 @@ export default function Index() {
             <SnapSection
                 id="top"
                 snap="start"
-                className="relative gap-12 dark:text-slate-200"
+                className="md-h:gap-12 relative dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
@@ -87,7 +88,9 @@ export default function Index() {
                         </div>
                     </div>
                 </div>
-                <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                <HashLink to="/" elementId="skills">
+                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                </HashLink>
             </SnapSection>
 
             <SnapSection id="skills" snap="start">
@@ -96,7 +99,7 @@ export default function Index() {
                     {experienceList.map((item) => (
                         <div
                             key={item.name}
-                            className="w-full rounded-xl bg-slate-500/40 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md dark:bg-neutral-500 md:w-56 lg:w-64"
+                            className="w-full rounded-xl bg-slate-500/40 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md dark:bg-neutral-600 md:w-56 lg:w-64"
                         >
                             <div className="p-2 text-center text-lg font-semibold dark:text-slate-200">
                                 {item.name}
@@ -114,16 +117,7 @@ export default function Index() {
                 </div>
 
                 <p className="text-center italic underline-offset-2">
-                    <Trans i18nKey="index.skills.note">
-                        Note: The numbers are{" "}
-                        <span
-                            className="underline decoration-dotted"
-                            title="A value of 100% does not imply a total mastery with nothing new to discover"
-                        >
-                            relative
-                        </span>{" "}
-                        to each other.
-                    </Trans>
+                    {t("index.skills.note")}
                 </p>
             </SnapSection>
 
@@ -137,7 +131,7 @@ export default function Index() {
                     </Trans>
                 </h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>{t("index.projects.description1")}</p>
                         <p>
                             {t("index.projects.techUsed", {
@@ -166,7 +160,7 @@ export default function Index() {
             <SnapSection snap="start">
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>{t("index.projects.description2")}</p>
                         <p className="m-0">
                             {t("index.projects.techUsed", {
@@ -197,7 +191,7 @@ export default function Index() {
             <SnapSection snap="start">
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-8">
+                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>
                             <Trans i18nKey="index.projects.description3">
                                 <code>yr-weather</code> is a Python library to

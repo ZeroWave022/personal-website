@@ -45,7 +45,7 @@ export default {
             },
             screens: {
                 mdh: {
-                    raw: "(min-height: 700px)",
+                    raw: "(min-height: 600px) and (min-width: 640px)",
                 },
             },
             boxShadow: {

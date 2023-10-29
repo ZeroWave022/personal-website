@@ -10,7 +10,7 @@
             "title": "Kompetanse",
             "duration_one": "{{count}} år med erfaring",
             "duration_other": "{{count}} år med erfaring",
-            "note": "Merk: Tallene er <2>i forhold</2> til hverandre."
+            "note": "Merk: Oversikten indikerer nivået av komfort med å bruke språket/verktøyet, og bør på ingen måte antyde at det ikke finnes noe nytt å lære."
         },
         "projects": {
             "title1": "Prosjekt 1: Discover <2>Poland</2>",
