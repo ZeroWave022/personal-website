@@ -96,7 +96,7 @@ export default function Index() {
                     {experienceList.map((item) => (
                         <div
                             key={item.name}
-                            className="w-full rounded-xl bg-slate-500/40 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md dark:bg-neutral-500 md:w-56 lg:w-64"
+                            className="w-full rounded-xl bg-slate-500/40 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md dark:bg-neutral-600 md:w-56 lg:w-64"
                         >
                             <div className="p-2 text-center text-lg font-semibold dark:text-slate-200">
                                 {item.name}
