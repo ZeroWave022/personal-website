@@ -114,16 +114,7 @@ export default function Index() {
                 </div>
 
                 <p className="text-center italic underline-offset-2">
-                    <Trans i18nKey="index.skills.note">
-                        Note: The numbers are{" "}
-                        <span
-                            className="underline decoration-dotted"
-                            title="A value of 100% does not imply a total mastery with nothing new to discover"
-                        >
-                            relative
-                        </span>{" "}
-                        to each other.
-                    </Trans>
+                    {t("index.skills.note")}
                 </p>
             </SnapSection>
 

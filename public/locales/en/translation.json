@@ -10,7 +10,7 @@
             "title": "Skills",
             "duration_one": "{{count}} year of experience",
             "duration_other": "{{count}} years of experience",
-            "note": "Note: The numbers are <2>relative</2> to each other."
+            "note": "Note: The progress bars indicate level of comfort developing in said language/tool, and should by no means imply that there's nothing new to learn."
         },
         "projects": {
             "title1": "Project 1: Discover <2>Poland</2>",
