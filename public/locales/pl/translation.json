@@ -8,10 +8,10 @@
         },
         "skills": {
             "title": "Kompetencje",
-            "duration_one": "{{count}} rok doświadczenia",
-            "duration_few": "{{count}} lata doświadczenia",
-            "duration_many": "{{count}} lat doświadczenia",
-            "duration_other": "{{count}} lat doświadczenia",
+            "duration_one": "Tworzę projekty od {{count}} roku",
+            "duration_few": "Tworzę projekty od {{count}} lat",
+            "duration_many": "Tworzę projekty od {{count}} lat",
+            "duration_other": "Tworzę projekty od {{count}} lat",
             "note": "Uwaga: Paski postępu wskazują stopień komfortu podczas używania języka/narzędzia, i w żadnym wypadku nie powinny sugerować, że nie ma niczego nowego do nauczenia się."
         },
         "projects": {

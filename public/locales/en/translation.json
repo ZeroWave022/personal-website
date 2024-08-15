@@ -8,8 +8,8 @@
         },
         "skills": {
             "title": "Skills",
-            "duration_one": "{{count}} year of experience",
-            "duration_other": "{{count}} years of experience",
+            "duration_one": "Creating projects for {{count}} year",
+            "duration_other": "Creating projects for {{count}} years",
             "note": "Note: The progress bars indicate level of comfort developing in said language/tool, and should by no means imply that there's nothing new to learn."
         },
         "projects": {

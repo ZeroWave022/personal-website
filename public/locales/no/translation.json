@@ -8,8 +8,8 @@
         },
         "skills": {
             "title": "Kompetanse",
-            "duration_one": "{{count}} år med erfaring",
-            "duration_other": "{{count}} år med erfaring",
+            "duration_one": "Jeg lager prosjekter siden {{count}} år",
+            "duration_other": "Jeg lager prosjekter siden {{count}} år",
             "note": "Merk: Oversikten indikerer nivået av komfort med å bruke språket/verktøyet, og bør på ingen måte antyde at det ikke finnes noe nytt å lære."
         },
         "projects": {
