@@ -15,10 +15,14 @@
         "projects": {
             "title1": "Project 1: Discover <2>Poland</2>",
             "description1": "Have you ever considered visiting Poland? Visit Discover Poland now to find out why it's a good idea! Discover Poland is a website about tourist attractions in Poland, encouraging to discover the ❤️ of Europe.",
-            "title2": "Project 2: MusicVision",
-            "description2": "MusicVision is an experimental project to create a Spotify dashboard, including your top artists, tracks, historical listening data and playback control. Currently MusicVision isn't available as a website, but the code is public on GitHub.",
-            "title3": "Project 3: yr-weather",
-            "description3": "<0>yr-weather</0> is a Python library to get weather data from the Norwegian Meteorological Institute's APIs. They are completely free to use and this library aims to make it as simple as possible to use them.",
+            "title2": "Project 2: yr-weather",
+            "description2": "<0>yr-weather</0> is a Python library to get weather data from the Norwegian Meteorological Institute's APIs. They are completely free to use and this library aims to make it as simple as possible to use them.",
+            "title3": "Project 3: TrafficEvader",
+            "description3": "Have you ever been a little annoyed at the traffic while on your way home, to work, or to your friend's place? Well, here's your opportunity to learn how to evade traffic: Presenting Traffic Evader! This is a classic game where you have to avoid oncoming obstacles to survive and get a new high score (and to arrive at your destination).",
+            "title4": "Project 4: .mdTables",
+            "description4": "A simple project providing easy conversion from data to markdown tables. Both manual input and files are supported!",
+            "title5": "Project 5: MusicVision",
+            "description5": "MusicVision is an experimental project to create a Spotify dashboard, including your top artists, tracks, historical listening data and playback control. Currently MusicVision isn't available as a website, but the code is public on GitHub.",
             "techUsed": "Technologies used: {{tech, list}}",
             "socialifyNote": "The image is provided by <2>socialify</2>."
         }

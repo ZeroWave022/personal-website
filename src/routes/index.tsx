@@ -9,6 +9,7 @@ import { ProjectImage } from "@components/ProjectImage";
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
+import mdtables from "@assets/mdtables.png";
 
 export default function Index() {
     const experienceList = [
@@ -161,39 +162,8 @@ export default function Index() {
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description2")}</p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", {
-                                tech: [
-                                    "Flask (Python)",
-                                    "PostgreSQL",
-                                    "chart.js",
-                                ],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/MusicVision"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
-                    <ProjectImage
-                        imgSrc={musicvision}
-                        imgAlt="MusicVision"
-                        href="https://github.com/ZeroWave022/MusicVision"
-                        wrapperClassName="bg-[#e4dccf] p-5"
-                    />
-                </div>
-            </SnapSection>
-
-            <SnapSection snap="start">
-                <h1>{t("index.projects.title3")}</h1>
-                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-4">
                         <p>
-                            <Trans i18nKey="index.projects.description3">
+                            <Trans i18nKey="index.projects.description2">
                                 <code>yr-weather</code> is a Python library to
                                 get weather data from the Norwegian
                                 Meteorological Institute&apos;s APIs. They are
@@ -233,6 +203,93 @@ export default function Index() {
                             </Trans>
                         </p>
                     </div>
+                </div>
+            </SnapSection>
+
+            <SnapSection snap="start">
+                <h1>{t("index.projects.title3")}</h1>
+                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p>{t("index.projects.description3")}</p>
+                        <p className="m-0">
+                            {t("index.projects.techUsed", {
+                                tech: ["Pygame (Python)"],
+                            })}
+                        </p>
+
+                        <LargeLink
+                            color="green-light"
+                            link="https://github.com/ZeroWave022/TrafficEvader"
+                        >
+                            {t("common.browseCode")}
+                        </LargeLink>
+                    </div>
+                    <div className="flex flex-col items-center gap-2.5">
+                        <ProjectImage
+                            imgSrc="https://raw.githubusercontent.com/ZeroWave022/TrafficEvader/main/imgs/preview.png"
+                            imgAlt="TrafficEvader"
+                            href="https://github.com/ZeroWave022/TrafficEvader"
+                        />
+                    </div>
+                </div>
+            </SnapSection>
+
+            <SnapSection snap="start">
+                <h1>{t("index.projects.title4")}</h1>
+                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p>{t("index.projects.description4")}</p>
+                        <p className="m-0">
+                            {t("index.projects.techUsed", {
+                                tech: ["Nuxt.js (Vue), Typescript"],
+                            })}
+                        </p>
+
+                        <LargeLink
+                            color="green-light"
+                            link="https://github.com/ZeroWave022/mdtables"
+                        >
+                            {t("common.browseCode")}
+                        </LargeLink>
+                    </div>
+                    <div className="flex flex-col items-center gap-2.5">
+                        <ProjectImage
+                            imgSrc={mdtables}
+                            imgAlt=".mdTables"
+                            href="https://github.com/ZeroWave022/mdtables"
+                        />
+                    </div>
+                </div>
+            </SnapSection>
+
+            <SnapSection snap="start">
+                <h1>{t("index.projects.title5")}</h1>
+                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p>{t("index.projects.description5")}</p>
+                        <p className="m-0">
+                            {t("index.projects.techUsed", {
+                                tech: [
+                                    "Flask (Python)",
+                                    "PostgreSQL",
+                                    "chart.js",
+                                ],
+                            })}
+                        </p>
+
+                        <LargeLink
+                            color="green-light"
+                            link="https://github.com/ZeroWave022/MusicVision"
+                        >
+                            {t("common.browseCode")}
+                        </LargeLink>
+                    </div>
+                    <ProjectImage
+                        imgSrc={musicvision}
+                        imgAlt="MusicVision"
+                        href="https://github.com/ZeroWave022/MusicVision"
+                        wrapperClassName="bg-[#e4dccf] p-5"
+                    />
                 </div>
             </SnapSection>
         </>
