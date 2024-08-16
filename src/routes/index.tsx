@@ -3,7 +3,7 @@ import { Trans, useTranslation } from "react-i18next";
 
 import { ProgressBar } from "@components/ProgressBar";
 import { LargeLink } from "@components/LargeLink";
-import { SnapSection } from "@components/SnapSection";
+import { Section } from "@components/Section";
 import { ProjectImage } from "@components/ProjectImage";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -49,10 +49,9 @@ export default function Index() {
 
     return (
         <>
-            <SnapSection
+            <Section
                 id="top"
-                snap="start"
-                className="md-h:gap-12 relative dark:text-slate-200"
+                className="md-h:gap-12 relative h-screen dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
                     <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
@@ -90,11 +89,14 @@ export default function Index() {
                     </div>
                 </div>
                 <HashLink to="/" elementId="skills">
-                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-20 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
                 </HashLink>
-            </SnapSection>
+            </Section>
 
-            <SnapSection id="skills" snap="start">
+            <Section
+                id="skills"
+                className="bg-gray-200/50 dark:bg-neutral-800/20"
+            >
                 <h1>{t("index.skills.title")}</h1>
                 <div className="mx-auto my-5 grid w-[80vw] grid-cols-2 items-center justify-items-center gap-5 md:w-fit lg:grid-cols-3">
                     {experienceList.map((item) => (
@@ -120,9 +122,9 @@ export default function Index() {
                 <p className="text-center italic underline-offset-2">
                     {t("index.skills.note")}
                 </p>
-            </SnapSection>
+            </Section>
 
-            <SnapSection id="projects" snap="start">
+            <Section id="projects">
                 <h1>
                     <Trans i18nKey="index.projects.title1">
                         Project 1: Discover{" "}
@@ -156,9 +158,9 @@ export default function Index() {
                         wrapperClassName="bg-white py-5"
                     />
                 </div>
-            </SnapSection>
+            </Section>
 
-            <SnapSection snap="start">
+            <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
@@ -204,9 +206,9 @@ export default function Index() {
                         </p>
                     </div>
                 </div>
-            </SnapSection>
+            </Section>
 
-            <SnapSection snap="start">
+            <Section>
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
@@ -232,9 +234,9 @@ export default function Index() {
                         />
                     </div>
                 </div>
-            </SnapSection>
+            </Section>
 
-            <SnapSection snap="start">
+            <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title4")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
@@ -260,9 +262,9 @@ export default function Index() {
                         />
                     </div>
                 </div>
-            </SnapSection>
+            </Section>
 
-            <SnapSection snap="start">
+            <Section>
                 <h1>{t("index.projects.title5")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
@@ -291,7 +293,7 @@ export default function Index() {
                         wrapperClassName="bg-[#e4dccf] p-5"
                     />
                 </div>
-            </SnapSection>
+            </Section>
         </>
     );
 }

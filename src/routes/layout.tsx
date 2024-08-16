@@ -6,16 +6,13 @@ import { Footer } from "@components/Footer";
 export default function Layout() {
     return (
         <>
-            <div className="h-screen overflow-auto scroll-smooth mdh:snap-y mdh:snap-mandatory">
+            <div className="flex h-screen flex-col overflow-auto scroll-smooth">
                 <header className="sticky top-0 z-50">
                     <Navbar />
                 </header>
 
-                <main className="flex flex-col gap-16 bg-slate-100 dark:bg-neutral-900 dark:text-slate-200">
-                    <div className="mx-6 mt-5">
-                        <Outlet />
-                    </div>
-
+                <main className="flex grow flex-col bg-slate-100 dark:bg-neutral-900 dark:text-slate-200">
+                    <Outlet />
                     <Footer />
                 </main>
             </div>

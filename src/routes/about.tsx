@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 
 import { LargeLink } from "@components/LargeLink";
-import { SnapSection } from "@components/SnapSection";
+import { Section } from "@components/Section";
 
 export default function About() {
     const { t } = useTranslation();
 
     return (
         <>
-            <SnapSection id="top" snap="start">
+            <Section id="top">
                 <div className="flex flex-col items-center gap-5">
                     <h1>{t("about.title")}</h1>
                     <p>{t("about.description.part1")}</p>
@@ -25,7 +25,7 @@ export default function About() {
                         </LargeLink>
                     </div>
                 </div>
-            </SnapSection>
+            </Section>
         </>
     );
 }
