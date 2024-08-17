@@ -14,6 +14,17 @@ export function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const { t, i18n } = useTranslation();
 
+    // Fetching dark mode preferences and initial state
+    const darkModePreferred = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+    ).matches;
+
+    const customPreference = localStorage.getItem("darkModeOn");
+
+    const [darkModeOn, setDarkMode] = useState(
+        !customPreference ? darkModePreferred : customPreference === "true",
+    );
+
     return (
         <>
             <nav className="text-md relative flex items-center justify-between bg-slate-100 px-6 py-1 font-semibold text-gray-900 shadow-md dark:bg-neutral-800 dark:text-slate-100 lg:px-8">
@@ -42,7 +53,11 @@ export function Navbar() {
                 {/* Utilities shown top right on desktop */}
                 <div className="hidden items-center gap-5 lg:flex">
                     <LanguageSwitcher />
-                    <DarkModeToggle menuType="desktop" />
+                    <DarkModeToggle
+                        menuType="desktop"
+                        darkModeOn={darkModeOn}
+                        onClick={() => setDarkMode(!darkModeOn)}
+                    />
                 </div>
                 {/* Mobile menu icon */}
                 <button
@@ -126,7 +141,11 @@ export function Navbar() {
                             </div>
                         </div>
                         <div className="absolute bottom-6 left-6">
-                            <DarkModeToggle menuType="mobile" />
+                            <DarkModeToggle
+                                menuType="mobile"
+                                darkModeOn={darkModeOn}
+                                onClick={() => setDarkMode(!darkModeOn)}
+                            />
                         </div>
                     </Dialog.Panel>
                 </Dialog>
