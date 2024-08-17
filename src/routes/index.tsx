@@ -54,7 +54,7 @@ export default function Index() {
                 className="md-h:gap-12 relative h-screen dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
-                    <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
+                    <h1 className="border-b-2 border-black pb-2 text-4xl font-light dark:border-b-slate-200">
                         {t("index.intro.hello")}
                     </h1>
                     <div className="flex flex-col">
@@ -76,16 +76,14 @@ export default function Index() {
                         </Trans>
                     </div>
                 </div>
-                <div className="m-2.5 lg:max-w-3xl">
-                    <div className="mt-2.5">
-                        <h2>{t("index.intro.toolsHeader")}</h2>
-                        <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
-                            <img
-                                className=""
-                                src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
-                                alt={t("index.intro.toolsImgAlt")}
-                            />
-                        </div>
+                <div className="mt-2.5 lg:max-w-3xl">
+                    <h2>{t("index.intro.toolsHeader")}</h2>
+                    <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
+                        <img
+                            className=""
+                            src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
+                            alt={t("index.intro.toolsImgAlt")}
+                        />
                     </div>
                 </div>
                 <HashLink to="/" elementId="skills">
