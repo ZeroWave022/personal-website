@@ -1,34 +1,32 @@
 import { useEffect } from "react";
 import classNames from "classnames";
 import { SunIcon, MoonIcon } from "@heroicons/react/24/outline";
+import { useLocalStorage } from "usehooks-ts";
 
 interface DarkModeToggleProps {
     menuType: "desktop" | "mobile";
-    darkModeOn: boolean;
-    onClick: () => void;
 }
 
-/**
- * This controlled component is dependent upon a parent which will control the dark mode state.
- * This solution is used to syncronize all other DarkModeToggles so they display the same icon
- * and have the same state at all times.
- * For handling of initial state and the onClick event, see the Navbar component.
- */
-export function DarkModeToggle({
-    menuType,
-    darkModeOn,
-    onClick,
-}: DarkModeToggleProps) {
-    useEffect(() => {
-        // darkModeOn may initially be undefined. If so, don't update the DOM.
-        if (!(typeof darkModeOn === "boolean")) return;
+export function DarkModeToggle({ menuType }: DarkModeToggleProps) {
+    const darkModePreferred = window.matchMedia(
+        "(prefers-color-scheme: dark)",
+    ).matches;
 
+    const customPreference = localStorage.getItem("darkModeOn");
+
+    // Set the state to the manually selected preference, otherwise use the media query
+    const [darkModeOn, setDarkMode] = useLocalStorage(
+        "darkModeOn",
+        !customPreference ? darkModePreferred : customPreference == "true",
+    );
+
+    useEffect(() => {
         if (darkModeOn) {
             document.documentElement.classList.add("dark");
-            localStorage.setItem("darkModeOn", "true");
+            setDarkMode(true);
         } else {
             document.documentElement.classList.remove("dark");
-            localStorage.setItem("darkModeOn", "false");
+            setDarkMode(false);
         }
     }, [darkModeOn]);
 
@@ -38,7 +36,7 @@ export function DarkModeToggle({
     });
 
     return (
-        <button className={btnClass} onClick={onClick}>
+        <button className={btnClass} onClick={() => setDarkMode(!darkModeOn)}>
             {darkModeOn ? <SunIcon /> : <MoonIcon />}
         </button>
     );
