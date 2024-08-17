@@ -22,7 +22,7 @@ export function LargeLink({
     if (internal) {
         return (
             <HashLink
-                className={`${colors[color]} w-fit rounded-sm p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
+                className={`${colors[color]} w-fit rounded-lg p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
                 to={link}
                 elementId={elementId}
             >
@@ -33,7 +33,7 @@ export function LargeLink({
 
     return (
         <a
-            className={`${colors[color]} w-fit rounded-sm p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
+            className={`${colors[color]} w-fit rounded-lg p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
             href={link}
             target="_blank"
             rel="noreferrer"
