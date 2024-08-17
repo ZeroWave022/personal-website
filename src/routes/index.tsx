@@ -135,7 +135,9 @@ export default function Index() {
                 </h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description1")}</p>
+                        <p className="max-w-4xl">
+                            {t("index.projects.description1")}
+                        </p>
                         <p>
                             {t("index.projects.techUsed", {
                                 tech: ["Next.js", "React"],
@@ -164,7 +166,7 @@ export default function Index() {
                 <h1>{t("index.projects.title2")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>
+                        <p className="max-w-4xl">
                             <Trans i18nKey="index.projects.description2">
                                 <code>yr-weather</code> is a Python library to
                                 get weather data from the Norwegian
@@ -212,7 +214,9 @@ export default function Index() {
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description3")}</p>
+                        <p className="max-w-4xl">
+                            {t("index.projects.description3")}
+                        </p>
                         <p className="m-0">
                             {t("index.projects.techUsed", {
                                 tech: ["Pygame (Python)"],
@@ -240,7 +244,9 @@ export default function Index() {
                 <h1>{t("index.projects.title4")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description4")}</p>
+                        <p className="max-w-4xl">
+                            {t("index.projects.description4")}
+                        </p>
                         <p className="m-0">
                             {t("index.projects.techUsed", {
                                 tech: ["Nuxt.js (Vue), Typescript"],
@@ -268,7 +274,9 @@ export default function Index() {
                 <h1>{t("index.projects.title5")}</h1>
                 <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description5")}</p>
+                        <p className="max-w-4xl">
+                            {t("index.projects.description5")}
+                        </p>
                         <p className="m-0">
                             {t("index.projects.techUsed", {
                                 tech: [
