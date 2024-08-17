@@ -162,28 +162,7 @@ export default function Index() {
 
             <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title2")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
-                            <Trans i18nKey="index.projects.description2">
-                                <code>yr-weather</code> is a Python library to
-                                get weather data from the Norwegian
-                                Meteorological Institute&apos;s APIs. They are
-                                completely free to use and this library aims to
-                                make it as simple as possible to use them.
-                            </Trans>
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", { tech: ["Python"] })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/yr-weather"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
+                <div className="flex flex-col-reverse items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center gap-2.5">
                         <ProjectImage
                             imgSrc="https://socialify.git.ci/ZeroWave022/yr-weather/image?description=1&descriptionEditable=Fetch%20weather%20data%20the%20from%20Norwegian%20Meteorological%20Institute%27s%20APIs%20easily.&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark"
@@ -204,6 +183,27 @@ export default function Index() {
                                 .
                             </Trans>
                         </p>
+                    </div>
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <p className="max-w-4xl">
+                            <Trans i18nKey="index.projects.description2">
+                                <code>yr-weather</code> is a Python library to
+                                get weather data from the Norwegian
+                                Meteorological Institute&apos;s APIs. They are
+                                completely free to use and this library aims to
+                                make it as simple as possible to use them.
+                            </Trans>
+                        </p>
+                        <p className="m-0">
+                            {t("index.projects.techUsed", { tech: ["Python"] })}
+                        </p>
+
+                        <LargeLink
+                            color="green-light"
+                            link="https://github.com/ZeroWave022/yr-weather"
+                        >
+                            {t("common.browseCode")}
+                        </LargeLink>
                     </div>
                 </div>
             </Section>
@@ -240,7 +240,14 @@ export default function Index() {
 
             <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title4")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                <div className="flex flex-col-reverse items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                    <div className="flex flex-col items-center gap-2.5">
+                        <ProjectImage
+                            imgSrc={mdtables}
+                            imgAlt=".mdTables"
+                            href="https://github.com/ZeroWave022/mdtables"
+                        />
+                    </div>
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             {t("index.projects.description4")}
@@ -257,13 +264,6 @@ export default function Index() {
                         >
                             {t("common.browseCode")}
                         </LargeLink>
-                    </div>
-                    <div className="flex flex-col items-center gap-2.5">
-                        <ProjectImage
-                            imgSrc={mdtables}
-                            imgAlt=".mdTables"
-                            href="https://github.com/ZeroWave022/mdtables"
-                        />
                     </div>
                 </div>
             </Section>
