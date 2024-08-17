@@ -1,9 +1,9 @@
 import { HashLink } from "react-router-hash-link";
 import { Trans, useTranslation } from "react-i18next";
 
-import { ProgressBar } from "@components/ProgressBar";
-import { LargeLink } from "@components/LargeLink";
 import { Section } from "@components/Section";
+import { ProgressBar } from "@components/ProgressBar";
+import { ProjectDescription } from "@components/ProjectDescription";
 import { ProjectImage } from "@components/ProjectImage";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
@@ -132,25 +132,14 @@ export default function Index() {
                     </Trans>
                 </h1>
                 <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
-                            {t("index.projects.description1")}
-                        </p>
-                        <p>
-                            {t("index.projects.techUsed", {
-                                tech: ["Next.js", "React"],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://discoverpoland.netlify.app"
-                        >
-                            {t("common.visit", {
-                                destination: "Discover Poland",
-                            })}
-                        </LargeLink>
-                    </div>
+                    <ProjectDescription
+                        name="Discover Poland"
+                        descriptionKey="index.projects.description1"
+                        techUsed={["Next.js", "React"]}
+                        visitLink="https://discoverpoland.netlify.app"
+                        codeLink="https://github.com/ZeroWave022/DiscoverPoland"
+                        animation="fade-left"
+                    />
                     <ProjectImage
                         imgSrc={discover_poland}
                         imgAlt="Discover Poland"
@@ -184,8 +173,13 @@ export default function Index() {
                             </Trans>
                         </p>
                     </div>
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
+                    <ProjectDescription
+                        name="yr-weather"
+                        descriptionKey="index.projects.description2"
+                        techUsed={["Python"]}
+                        codeLink="https://github.com/ZeroWave022/yr-weather"
+                        animation="fade-right"
+                        customDescription={
                             <Trans i18nKey="index.projects.description2">
                                 <code>yr-weather</code> is a Python library to
                                 get weather data from the Norwegian
@@ -193,18 +187,8 @@ export default function Index() {
                                 completely free to use and this library aims to
                                 make it as simple as possible to use them.
                             </Trans>
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", { tech: ["Python"] })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/yr-weather"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
+                        }
+                    />
                 </div>
             </Section>
 
@@ -212,21 +196,13 @@ export default function Index() {
                 <h1>{t("index.projects.title3")}</h1>
                 <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
-                            {t("index.projects.description3")}
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", {
-                                tech: ["Pygame (Python)"],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/TrafficEvader"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
+                        <ProjectDescription
+                            name="TrafficEvader"
+                            descriptionKey="index.projects.description3"
+                            techUsed={["Pygame (Python)"]}
+                            codeLink="https://github.com/ZeroWave022/TrafficEvader"
+                            animation="fade-left"
+                        />
                     </div>
                     <div className="flex flex-col items-center gap-2.5">
                         <ProjectImage
@@ -249,21 +225,14 @@ export default function Index() {
                         />
                     </div>
                     <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
-                            {t("index.projects.description4")}
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", {
-                                tech: ["Nuxt.js (Vue)", "Typescript"],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/mdtables"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
+                        <ProjectDescription
+                            name=".mdTables"
+                            descriptionKey="index.projects.description4"
+                            techUsed={["Nuxt.js (Vue)", "Typescript"]}
+                            visitLink="https://mdtables.pages.dev/"
+                            codeLink="https://github.com/ZeroWave022/mdtables"
+                            animation="fade-right"
+                        />
                     </div>
                 </div>
             </Section>
@@ -271,27 +240,13 @@ export default function Index() {
             <Section>
                 <h1>{t("index.projects.title5")}</h1>
                 <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p className="max-w-4xl">
-                            {t("index.projects.description5")}
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", {
-                                tech: [
-                                    "Flask (Python)",
-                                    "PostgreSQL",
-                                    "chart.js",
-                                ],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/MusicVision"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
+                    <ProjectDescription
+                        name="MusicVision"
+                        descriptionKey="index.projects.description5"
+                        techUsed={["Flask (Python)", "PostgreSQL", "chart.js"]}
+                        codeLink="https://github.com/ZeroWave022/MusicVision"
+                        animation="fade-left"
+                    />
                     <ProjectImage
                         imgSrc={musicvision}
                         imgAlt="MusicVision"

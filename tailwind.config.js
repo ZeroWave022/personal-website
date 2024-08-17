@@ -8,6 +8,11 @@ export default {
                 "slide-items-5":
                     "slide-items-5 12.5s cubic-bezier(0.85, 0, 0.15, 1) infinite",
                 "scroll-icon-bounce": "scroll-icon-bounce 1s infinite",
+                "fade-left":
+                    "fade-left 0.75s cubic-bezier(0.39, 0.58, 0.57, 1)",
+                "fade-right":
+                    "fade-right 0.75s cubic-bezier(0.39, 0.58, 0.57, 1)",
+                "fade-up": "fade-up 0.75s cubic-bezier(0.39, 0.58, 0.57, 1)",
             },
             keyframes: {
                 "slide-items-5": {
@@ -40,6 +45,33 @@ export default {
                         transform: "translate(-50%, 25%)",
                         "animation-timing-function":
                             "cubic-bezier(0, 0, 0.2, 1)",
+                    },
+                },
+                "fade-left": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translateX(-2.5%)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                    },
+                },
+                "fade-right": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translateX(2.5%)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                    },
+                },
+                "fade-up": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translateY(2.5%)",
+                    },
+                    "100%": {
+                        opacity: 1,
                     },
                 },
             },
