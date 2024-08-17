@@ -16,7 +16,7 @@ export function ProjectImage({
     imgClassName,
 }: ProjectImageProps) {
     const wrapperClass = classNames(
-        "inline-block w-[80vw] cursor-pointer overflow-hidden rounded-md md:max-w-[45vw]",
+        "inline-block cursor-pointer overflow-hidden rounded-md lg:max-w-[45vw]",
         wrapperClassName,
     );
     const imgClass = classNames(
