@@ -28,7 +28,7 @@ export function DarkModeToggle({ menuType }: DarkModeToggleProps) {
             document.documentElement.classList.remove("dark");
             setDarkMode(false);
         }
-    }, [darkModeOn]);
+    }, [darkModeOn]); // eslint-disable-line
 
     const btnClass = classNames({
         "hidden lg:block lg:h-8 lg:w-8": menuType == "desktop",
