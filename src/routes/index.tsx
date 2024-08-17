@@ -96,7 +96,7 @@ export default function Index() {
                 className="bg-gray-200/50 dark:bg-neutral-800/20"
             >
                 <h1>{t("index.skills.title")}</h1>
-                <div className="mx-auto my-5 grid w-[80vw] grid-cols-2 items-center justify-items-center gap-5 md:w-fit lg:grid-cols-3">
+                <div className="mx-auto my-5 grid w-[80vw] grid-cols-1 items-center justify-items-center gap-5 md:w-fit md:grid-cols-2 lg:grid-cols-3">
                     {experienceList.map((item) => (
                         <div
                             key={item.name}
@@ -117,7 +117,7 @@ export default function Index() {
                     ))}
                 </div>
 
-                <p className="text-center italic underline-offset-2">
+                <p className="max-w-4xl text-center italic underline-offset-2">
                     {t("index.skills.note")}
                 </p>
             </Section>
