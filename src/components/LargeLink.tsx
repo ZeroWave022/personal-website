@@ -15,7 +15,7 @@ export function LargeLink({ color, link, internal, children }: LargeLinkProps) {
     if (internal) {
         return (
             <Link
-                className={`${colors[color]} w-fit rounded-sm p-2 text-black lg:p-3 lg:text-lg`}
+                className={`${colors[color]} w-fit rounded-sm p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
                 to={link}
             >
                 {children}
@@ -25,7 +25,7 @@ export function LargeLink({ color, link, internal, children }: LargeLinkProps) {
 
     return (
         <a
-            className={`${colors[color]} w-fit rounded-sm p-2 text-black lg:p-3 lg:text-lg`}
+            className={`${colors[color]} w-fit rounded-sm p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
             href={link}
             target="_blank"
             rel="noreferrer"
