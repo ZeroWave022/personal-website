@@ -133,7 +133,7 @@ export default function Index() {
                         </span>
                     </Trans>
                 </h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             {t("index.projects.description1")}
@@ -164,7 +164,7 @@ export default function Index() {
 
             <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title2")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             <Trans i18nKey="index.projects.description2">
@@ -212,7 +212,7 @@ export default function Index() {
 
             <Section>
                 <h1>{t("index.projects.title3")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             {t("index.projects.description3")}
@@ -242,7 +242,7 @@ export default function Index() {
 
             <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title4")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             {t("index.projects.description4")}
@@ -272,7 +272,7 @@ export default function Index() {
 
             <Section>
                 <h1>{t("index.projects.title5")}</h1>
-                <div className="flex flex-col items-center justify-center gap-5 lg:flex-row">
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center justify-center gap-4">
                         <p className="max-w-4xl">
                             {t("index.projects.description5")}

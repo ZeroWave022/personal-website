@@ -6,7 +6,7 @@ interface SectionProps extends React.ComponentPropsWithoutRef<"section"> {
 
 export function Section({ children, className, ...attributes }: SectionProps) {
     const allClasses = classNames(
-        "px-8 py-24 flex flex-col justify-center items-center",
+        "px-8 py-24 flex flex-col gap-5 justify-center items-center",
         className,
     );
 
