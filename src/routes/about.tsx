@@ -20,7 +20,12 @@ export default function About() {
                         >
                             {t("about.browseCode")}
                         </LargeLink>
-                        <LargeLink color="green-light" link="/" internal={true}>
+                        <LargeLink
+                            color="green-light"
+                            link="/"
+                            elementId="top"
+                            internal={true}
+                        >
                             {t("common.goBack")}
                         </LargeLink>
                     </div>
