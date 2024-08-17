@@ -4,7 +4,7 @@ Welcome to code for my [personal website](https://zerowave.pages.dev/)!
 
 ## Running
 
-Make sure you have an updated version of [`node.js`](https://nodejs.org/en). Clone the project, and install the dependencies using npm or [pnpm](https://pnpm.io/):
+Make sure you have an updated version of [node.js](https://nodejs.org/en). Clone the project, and install the dependencies using npm or [pnpm](https://pnpm.io/):
 
 ```
 pnpm install
