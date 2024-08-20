@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const colors = {
     "green-light": "bg-emerald-500",
@@ -8,24 +8,32 @@ interface LargeLinkProps {
     color: keyof typeof colors;
     link: string;
     internal?: boolean;
+    elementId?: string;
     children: string;
 }
 
-export function LargeLink({ color, link, internal, children }: LargeLinkProps) {
+export function LargeLink({
+    color,
+    link,
+    internal,
+    elementId,
+    children,
+}: LargeLinkProps) {
     if (internal) {
         return (
-            <Link
-                className={`${colors[color]} w-fit rounded-sm p-2 text-black lg:p-3 lg:text-lg`}
+            <HashLink
+                className={`${colors[color]} w-fit rounded-lg p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
                 to={link}
+                elementId={elementId}
             >
                 {children}
-            </Link>
+            </HashLink>
         );
     }
 
     return (
         <a
-            className={`${colors[color]} w-fit rounded-sm p-2 text-black lg:p-3 lg:text-lg`}
+            className={`${colors[color]} w-fit rounded-lg p-3 text-lg font-semibold text-neutral-900 lg:text-xl`}
             href={link}
             target="_blank"
             rel="noreferrer"

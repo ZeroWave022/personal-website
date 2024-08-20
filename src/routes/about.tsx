@@ -1,18 +1,18 @@
 import { useTranslation } from "react-i18next";
 
 import { LargeLink } from "@components/LargeLink";
-import { SnapSection } from "@components/SnapSection";
+import { Section } from "@components/Section";
 
 export default function About() {
     const { t } = useTranslation();
 
     return (
         <>
-            <SnapSection id="top" snap="start">
+            <Section id="top">
                 <div className="flex flex-col items-center gap-5">
                     <h1>{t("about.title")}</h1>
-                    <p>{t("about.description.part1")}</p>
-                    <p>{t("about.description.part2")}</p>
+                    <p className="max-w-4xl">{t("about.description.part1")}</p>
+                    <p className="max-w-4xl">{t("about.description.part2")}</p>
                     <div className="flex flex-col items-center justify-center gap-2">
                         <LargeLink
                             color="green-light"
@@ -20,12 +20,17 @@ export default function About() {
                         >
                             {t("about.browseCode")}
                         </LargeLink>
-                        <LargeLink color="green-light" link="/" internal={true}>
+                        <LargeLink
+                            color="green-light"
+                            link="/"
+                            elementId="top"
+                            internal={true}
+                        >
                             {t("common.goBack")}
                         </LargeLink>
                     </div>
                 </div>
-            </SnapSection>
+            </Section>
         </>
     );
 }

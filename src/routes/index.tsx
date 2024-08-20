@@ -1,68 +1,35 @@
 import { HashLink } from "react-router-hash-link";
 import { Trans, useTranslation } from "react-i18next";
 
-import { ProgressBar } from "@components/ProgressBar";
-import { LargeLink } from "@components/LargeLink";
-import { SnapSection } from "@components/SnapSection";
+import { Section } from "@components/Section";
+import { SkillsSummary } from "@components/SkillsSummary";
+import { ProjectDescription } from "@components/ProjectDescription";
 import { ProjectImage } from "@components/ProjectImage";
 
 import { ChevronDownIcon } from "@heroicons/react/24/outline";
 import discover_poland from "@assets/discover_poland.png";
 import musicvision from "@assets/musicvision.png";
+import mdtables from "@assets/mdtables.png";
 
 export default function Index() {
-    const experienceList = [
-        {
-            name: "Python",
-            level: "100%",
-            duration: new Date().getFullYear() - 2017,
-        },
-        {
-            name: "Javascript",
-            level: "100%",
-            duration: new Date().getFullYear() - 2020,
-        },
-        {
-            name: "Typescript",
-            level: "70%",
-            duration: new Date().getFullYear() - 2021,
-        },
-        {
-            name: "HTML",
-            level: "100%",
-            duration: new Date().getFullYear() - 2020,
-        },
-        {
-            name: "CSS",
-            level: "80%",
-            duration: new Date().getFullYear() - 2020,
-        },
-        {
-            name: "React",
-            level: "70%",
-            duration: new Date().getFullYear() - 2021,
-        },
-    ];
-
     const { t } = useTranslation();
 
     return (
         <>
-            <SnapSection
+            <Section
                 id="top"
-                snap="start"
-                className="md-h:gap-12 relative dark:text-slate-200"
+                className="md-h:gap-12 relative h-screen dark:text-slate-200"
             >
                 <div className="m-2.5 flex flex-col text-3xl font-semibold md:text-4xl">
-                    <h1 className="border-b-2 border-black pb-1.5 font-normal dark:border-b-slate-200">
+                    <h1 className="border-b-2 border-black pb-2 text-4xl font-light dark:border-b-slate-200">
                         {t("index.intro.hello")}
                     </h1>
                     <div className="flex flex-col">
                         <Trans i18nKey="index.intro.scrollingSubheader">
                             <div>
                                 I create
-                                <span className="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] flex-col overflow-hidden text-green-600 dark:text-emerald-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))]">
-                                    <ul className="block animate-slide-items-5 leading-tight [&_li]:whitespace-nowrap">
+                                <span className="inline-flex h-[calc(theme(fontSize.3xl)*theme(lineHeight.normal))] flex-col overflow-hidden text-green-600 dark:text-emerald-500 md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.normal))]">
+                                    <ul className="block animate-slide-items-5 leading-normal [&_li]:whitespace-nowrap">
                                         <li>websites</li>
                                         <li>games</li>
                                         <li>frameworks</li>
@@ -76,52 +43,30 @@ export default function Index() {
                         </Trans>
                     </div>
                 </div>
-                <div className="m-2.5 lg:max-w-3xl">
-                    <div className="mt-2.5">
-                        <h2>{t("index.intro.toolsHeader")}</h2>
-                        <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
-                            <img
-                                className=""
-                                src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
-                                alt={t("index.intro.toolsImgAlt")}
-                            />
-                        </div>
+                <div className="mt-2.5 lg:max-w-3xl">
+                    <h2>{t("index.intro.toolsHeader")}</h2>
+                    <div className="mx-auto my-5 w-fit rounded-md border-2 border-emerald-600 bg-slate-200 p-3 shadow-xl dark:border-emerald-400/90 dark:bg-neutral-800 dark:shadow-none">
+                        <img
+                            className=""
+                            src="https://skillicons.dev/icons?i=html,css,react,py,ts,js,cs,cpp,nginx,next,express,flask,jquery,mongodb,postgres,mysql,cloudflare,netlify,raspberrypi,unity,git,github,md,postman&perline=8"
+                            alt={t("index.intro.toolsImgAlt")}
+                        />
                     </div>
                 </div>
                 <HashLink to="/" elementId="skills">
-                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-5 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
+                    <ChevronDownIcon className="anim-delay-5000 absolute bottom-20 left-1/2 hidden h-8 w-8 -translate-x-1/2 animate-scroll-icon-bounce mdh:block" />
                 </HashLink>
-            </SnapSection>
+            </Section>
 
-            <SnapSection id="skills" snap="start">
+            <Section
+                id="skills"
+                className="bg-gray-200/50 dark:bg-neutral-800/20"
+            >
                 <h1>{t("index.skills.title")}</h1>
-                <div className="mx-auto my-5 grid w-[80vw] grid-cols-2 items-center justify-items-center gap-5 md:w-fit lg:grid-cols-3">
-                    {experienceList.map((item) => (
-                        <div
-                            key={item.name}
-                            className="w-full rounded-xl bg-slate-500/40 shadow-sm transition-shadow duration-300 ease-in-out hover:shadow-md dark:bg-neutral-600 md:w-56 lg:w-64"
-                        >
-                            <div className="p-2 text-center text-lg font-semibold dark:text-slate-200">
-                                {item.name}
-                            </div>
-                            <div className="p-2 dark:text-slate-200">
-                                <ProgressBar percent={item.level} />
-                            </div>
-                            <div className="p-2 text-center dark:text-slate-200">
-                                {t("index.skills.duration", {
-                                    count: item.duration,
-                                })}
-                            </div>
-                        </div>
-                    ))}
-                </div>
+                <SkillsSummary />
+            </Section>
 
-                <p className="text-center italic underline-offset-2">
-                    {t("index.skills.note")}
-                </p>
-            </SnapSection>
-
-            <SnapSection id="projects" snap="start">
+            <Section id="projects">
                 <h1>
                     <Trans i18nKey="index.projects.title1">
                         Project 1: Discover{" "}
@@ -130,24 +75,15 @@ export default function Index() {
                         </span>
                     </Trans>
                 </h1>
-                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description1")}</p>
-                        <p>
-                            {t("index.projects.techUsed", {
-                                tech: ["Next.js", "React"],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://discoverpoland.netlify.app"
-                        >
-                            {t("common.visit", {
-                                destination: "Discover Poland",
-                            })}
-                        </LargeLink>
-                    </div>
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                    <ProjectDescription
+                        name="Discover Poland"
+                        descriptionKey="index.projects.description1"
+                        techUsed={["Next.js", "React"]}
+                        visitLink="https://discoverpoland.netlify.app"
+                        codeLink="https://github.com/ZeroWave022/DiscoverPoland"
+                        animation="fade-left"
+                    />
                     <ProjectImage
                         imgSrc={discover_poland}
                         imgAlt="Discover Poland"
@@ -155,63 +91,11 @@ export default function Index() {
                         wrapperClassName="bg-white py-5"
                     />
                 </div>
-            </SnapSection>
+            </Section>
 
-            <SnapSection snap="start">
+            <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
                 <h1>{t("index.projects.title2")}</h1>
-                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p>{t("index.projects.description2")}</p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", {
-                                tech: [
-                                    "Flask (Python)",
-                                    "PostgreSQL",
-                                    "chart.js",
-                                ],
-                            })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/MusicVision"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
-                    <ProjectImage
-                        imgSrc={musicvision}
-                        imgAlt="MusicVision"
-                        href="https://github.com/ZeroWave022/MusicVision"
-                        wrapperClassName="bg-[#e4dccf] p-5"
-                    />
-                </div>
-            </SnapSection>
-
-            <SnapSection snap="start">
-                <h1>{t("index.projects.title3")}</h1>
-                <div className="m-5 flex flex-col items-center justify-center gap-5 md:flex-row">
-                    <div className="flex flex-col items-center justify-center gap-4">
-                        <p>
-                            <Trans i18nKey="index.projects.description3">
-                                <code>yr-weather</code> is a Python library to
-                                get weather data from the Norwegian
-                                Meteorological Institute&apos;s APIs. They are
-                                completely free to use and this library aims to
-                                make it as simple as possible to use them.
-                            </Trans>
-                        </p>
-                        <p className="m-0">
-                            {t("index.projects.techUsed", { tech: ["Python"] })}
-                        </p>
-
-                        <LargeLink
-                            color="green-light"
-                            link="https://github.com/ZeroWave022/yr-weather"
-                        >
-                            {t("common.browseCode")}
-                        </LargeLink>
-                    </div>
+                <div className="flex flex-col-reverse items-center justify-center gap-5 lg:grid lg:grid-cols-2">
                     <div className="flex flex-col items-center gap-2.5">
                         <ProjectImage
                             imgSrc="https://socialify.git.ci/ZeroWave022/yr-weather/image?description=1&descriptionEditable=Fetch%20weather%20data%20the%20from%20Norwegian%20Meteorological%20Institute%27s%20APIs%20easily.&language=1&name=1&owner=1&pattern=Circuit%20Board&theme=Dark"
@@ -233,8 +117,88 @@ export default function Index() {
                             </Trans>
                         </p>
                     </div>
+                    <ProjectDescription
+                        name="yr-weather"
+                        descriptionKey="index.projects.description2"
+                        techUsed={["Python"]}
+                        codeLink="https://github.com/ZeroWave022/yr-weather"
+                        animation="fade-right"
+                        customDescription={
+                            <Trans i18nKey="index.projects.description2">
+                                <code>yr-weather</code> is a Python library to
+                                get weather data from the Norwegian
+                                Meteorological Institute&apos;s APIs. They are
+                                completely free to use and this library aims to
+                                make it as simple as possible to use them.
+                            </Trans>
+                        }
+                    />
                 </div>
-            </SnapSection>
+            </Section>
+
+            <Section>
+                <h1>{t("index.projects.title3")}</h1>
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <ProjectDescription
+                            name="TrafficEvader"
+                            descriptionKey="index.projects.description3"
+                            techUsed={["Pygame (Python)"]}
+                            codeLink="https://github.com/ZeroWave022/TrafficEvader"
+                            animation="fade-left"
+                        />
+                    </div>
+                    <div className="flex flex-col items-center gap-2.5">
+                        <ProjectImage
+                            imgSrc="https://raw.githubusercontent.com/ZeroWave022/TrafficEvader/main/imgs/preview.png"
+                            imgAlt="TrafficEvader"
+                            href="https://github.com/ZeroWave022/TrafficEvader"
+                        />
+                    </div>
+                </div>
+            </Section>
+
+            <Section className="bg-gray-200/50 dark:bg-neutral-800/20">
+                <h1>{t("index.projects.title4")}</h1>
+                <div className="flex flex-col-reverse items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                    <div className="flex flex-col items-center gap-2.5">
+                        <ProjectImage
+                            imgSrc={mdtables}
+                            imgAlt=".mdTables"
+                            href="https://github.com/ZeroWave022/mdtables"
+                        />
+                    </div>
+                    <div className="flex flex-col items-center justify-center gap-4">
+                        <ProjectDescription
+                            name=".mdTables"
+                            descriptionKey="index.projects.description4"
+                            techUsed={["Nuxt.js (Vue)", "Typescript"]}
+                            visitLink="https://mdtables.pages.dev/"
+                            codeLink="https://github.com/ZeroWave022/mdtables"
+                            animation="fade-right"
+                        />
+                    </div>
+                </div>
+            </Section>
+
+            <Section>
+                <h1>{t("index.projects.title5")}</h1>
+                <div className="flex flex-col items-center justify-center gap-5 lg:grid lg:grid-cols-2">
+                    <ProjectDescription
+                        name="MusicVision"
+                        descriptionKey="index.projects.description5"
+                        techUsed={["Flask (Python)", "PostgreSQL", "chart.js"]}
+                        codeLink="https://github.com/ZeroWave022/MusicVision"
+                        animation="fade-left"
+                    />
+                    <ProjectImage
+                        imgSrc={musicvision}
+                        imgAlt="MusicVision"
+                        href="https://github.com/ZeroWave022/MusicVision"
+                        wrapperClassName="bg-[#e4dccf] p-5"
+                    />
+                </div>
+            </Section>
         </>
     );
 }
