@@ -1,6 +1,16 @@
 # Personal website
 
-Welcome to code for my [personal website](https://zerowave.pages.dev/)!
+Welcome to the GitHub repo for my [personal website](https://zerowave.pages.dev/)!
+
+The website is made using:
+
+-   [React](https://react.dev/)
+-   [React Router](https://reactrouter.com/en/main)
+-   [i18next](https://www.i18next.com/) and [react-i18next](https://react.i18next.com/)
+-   [Headless UI](https://headlessui.com/)
+
+The code is linted using [Eslint](https://eslint.org/) and formatted using [Prettier](https://prettier.io/).
+Git hooks running the mentioned tools are configured using [lint-staged](https://github.com/lint-staged/lint-staged) and [husky](https://github.com/typicode/husky).
 
 ## Running
 
